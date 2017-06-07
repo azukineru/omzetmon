@@ -59,24 +59,29 @@
         </div>
         <div class="callout primary">
           <div class="row column">
-            <h1>Welcome to OM-OMS | OMZET Online Monitoring System</h1>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla.</p>
+            <h2>Monitoring Data OMZET DP/ODP</h2>
           </div>
         </div>
         <div class="row small-up-2 medium-up-3 large-up-4">
-          <div class="column">
-            <img class="thumbnail" src="http://placehold.it/550x550">
-            <h5>My Site</h5>
-          </div>
-          <div class="column">
-            <img class="thumbnail" src="http://placehold.it/550x550">
-            <h5>My Site</h5>
-          </div>
-          <div class="column">
-            <img class="thumbnail" src="http://placehold.it/550x550">
-            <h5>My Site</h5>
-          </div>
-
+          <table>
+            <thead>
+              <tr>
+                <th>No.</th>
+                <th>No. Telp / No. Internet</th>
+                <th>Data Baru</th>
+                <th>Data Lama</th>
+                <th>Status</th>
+                <th>Keterangan</th>
+                <th>Tanggal</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+              <td>1</td><td>024123456</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
