@@ -59,7 +59,7 @@
         </div>
         <div class="callout primary">
           <div class="row column">
-            <h2>Monitoring Data OMZET DP/ODP</h2>
+            <h2>Monitoring Data OMZET Primer/Sekunder</h2>
           </div>
         </div>
         <div class="row small-up-2 medium-up-3 large-up-4">

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OM-OMS | Monitoring Data OMZET Perangkat Aktif</title>
+  <title>OM-OMS | Inserting Data OMZET Perangkat Aktif</title>
 
   <link rel="stylesheet" href="css/foundation.css">
   <link rel="stylesheet" href="css/app.css">
@@ -59,29 +59,36 @@
         </div>
         <div class="callout primary">
           <div class="row column">
-            <h2>Monitoring Data OMZET Perangkat Aktif</h2>
+            <h2>Inserting Data OMZET DP/ODP</h2>
           </div>
         </div>
-        <div class="row small-up-2 medium-up-3 large-up-4">
-          <table>
-            <thead>
-              <tr>
-                <th>No.</th>
-                <th>No. Telp / No. Internet</th>
-                <th>Data Baru</th>
-                <th>Data Lama</th>
-                <th>Status</th>
-                <th>Keterangan</th>
-                <th>Tanggal</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-              <td>1</td><td>024123456</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="row large-12">
+          <form>
+            <div class="row">
+              <div class="medium-6">
+                <label>No. Telepon / No. Internet
+                  <input type="text" required>
+                </label>
+              </div>
+              <div class="medium-6">
+                <label>Data OMZET Baru
+                  <input type="text" required>
+                </label>
+              </div>
+              <div class="medium-6">
+                <label>Data OMZET Lama
+                  <input type="text" required>
+                </label>
+              </div>
+              <div class="medium-6">
+                <label>Keterangan
+                  <input type="text">
+                </label>
+              </div>
+              <button type="submit" class="success button large">Save</button>
+            </div>
+            
+          </form>
         </div>
       </div>
     </div>
