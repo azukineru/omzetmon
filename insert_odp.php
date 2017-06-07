@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OM-OMS | Inserting Data OMZET Perangkat Aktif</title>
+  <title>OM-OMS | Inserting Data OMZET DP/ODP</title>
 
   <link rel="stylesheet" href="css/foundation.css">
   <link rel="stylesheet" href="css/app.css">
@@ -66,7 +66,17 @@
           <form>
             <div class="row">
               <div class="medium-6">
-                <label>No. Telepon / No. Internet
+                <label>No. Telepon
+                  <input type="text" required>
+                </label>
+              </div>
+              <div class="medium-6">
+                <label>No. Internet
+                  <input type="text" required>
+                </label>
+              </div>
+              <div class="medium-6">
+                <label>QR Code
                   <input type="text" required>
                 </label>
               </div>

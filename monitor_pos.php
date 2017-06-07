@@ -67,7 +67,9 @@
             <thead>
               <tr>
                 <th>No.</th>
-                <th>No. Telp / No. Internet</th>
+                <th>No. Telp</th>
+                <th>No. Internet</th>
+                <th>QR Code</th>
                 <th>Data Baru</th>
                 <th>Data Lama</th>
                 <th>Status</th>
