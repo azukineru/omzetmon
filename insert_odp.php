@@ -72,32 +72,32 @@
             <div class="row">
               <div class="medium-6">
                 <label>No. Telepon
-                  <input type="text" name="no_telp" required>
+                  <input type="text" name="no_telp" value="<?php echo isset($_POST['no_telp']) ? $_POST['no_telp'] : '' ?>" required>
                 </label>
               </div>
               <div class="medium-6">
                 <label>No. Internet
-                  <input type="text" name="no_internet" required>
+                  <input type="text" name="no_internet" value="<?php echo isset($_POST['no_internet']) ? $_POST['no_internet'] : '' ?>" required>
                 </label>
               </div>
               <div class="medium-6">
                 <label>QR Code
-                  <input type="text" name="qr" required>
+                  <input type="text" name="qr" value="<?php echo isset($_POST['qr']) ? $_POST['qr'] : '' ?>" required>
                 </label>
               </div>
               <div class="medium-6">
                 <label>Data Lama
-                  <input type="text" name="data_lama" required>
+                  <input type="text" name="data_lama" value="<?php echo isset($_POST['data_lama']) ? $_POST['data_lama'] : '' ?>" required>
                 </label>
               </div>
               <div class="medium-6">
                 <label>Data Baru
-                  <input type="text" name="data_baru" required>
+                  <input type="text" name="data_baru" value="<?php echo isset($_POST['data_baru']) ? $_POST['data_baru'] : '' ?>" required>
                 </label>
               </div>
               <div class="medium-6">
                 <label>Keterangan
-                  <input type="text" name="keterangan">
+                  <input type="text" name="keterangan" value="<?php echo isset($_POST['keterangan']) ? $_POST['keterangan'] : '' ?>">
                 </label>
               </div>
               <button type="submit" class="success button large" name="save">Save</button>
@@ -105,9 +105,16 @@
           </form>
 		  
 			<?php     
-                if (isset($_POST["save"])) { 
-					insertData(3,$_POST['no_telp'],$_POST['no_internet'],$_POST['qr'],$_POST['data_lama'],$_POST['data_baru'],$_POST['keterangan'],$_SESSION['login_user']);
-                }
+                if (isset($_POST["save"])) {
+					if(ctype_digit($_POST['no_telp']) && ctype_digit($_POST['no_internet'])){
+						insertData(3,$_POST['no_telp'],$_POST['no_internet'],$_POST['qr'],$_POST['data_lama'],$_POST['data_baru'],$_POST['keterangan'],$_SESSION['login_user']);
+					}else{
+						echo
+						'<script>
+							alert("Nomor Telepon atau Nomor Internet Salah");
+						</script>';
+					}
+				}
 			?> 
 			
         </div>

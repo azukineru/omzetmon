@@ -1,4 +1,10 @@
 <?php	
+
+	if(ctype_digit('123'))
+		echo 'lala';
+	else
+		echo'po';
+	
 	function insertData($opt, $notelp, $noint, $qr, $datalama, $databaru, $keterangan, $issuer){
 		include('database.php');
 		
@@ -6,14 +12,17 @@
 			case 1:
 				$id=uniqid('r1');
 				$tb='tb_pa';
+				$href='insert_pa.php';
 				break;
 			case 2:
 				$id=uniqid('r2');
 				$tb='tb_pos';
+				$href='insert_pos.php';
 				break;
 			case 3:
 				$id=uniqid('r3');
 				$tb='tb_dpodp';
+				$href='insert_odp.php';
 				break;
 			default:
 		}
@@ -31,6 +40,7 @@
 			echo
 			'<script>
 				alert("Data Berhasil Disimpan dengan id: '.$id.'");
+				window.location.href = "'.$href.'";
 			</script>';
 		} else {
 			echo 
@@ -183,7 +193,6 @@
           </form>';
 		  
 		if (isset($_POST["update"])) { 
-			echo 'oi';
 			$query="INSERT INTO tb_history (id, no_telp, no_internet, qr, data_lama, data_baru, status, keterangan, issuer, followup)
 					VALUES ('".$row['id']."', '".$row['no_telp']."', '".$row['no_internet']."', '".$row['qr']."', '".$row['data_lama']."', '".$row['data_baru']."', '".$_POST['status']."', '".$row['keterangan']."', '".$row['issuer']."', '".$followup."')";
 		
