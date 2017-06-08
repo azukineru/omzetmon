@@ -1,6 +1,6 @@
 <?php
-	include('session.php');
-	include('omom.php');
+include('session.php');
+include('omom.php');
 ?>
 
 <!doctype html>
@@ -22,17 +22,17 @@
     <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
 
       <div class="off-canvas position-left reveal-for-large" id="my-info" data-off-canvas data-position="left">
-        <div class="row column">
+        <div class="medium-12">
           <br>
           <img class="thumbnail" src="http://placehold.it/550x350">
-          <a href="dashboard.php"><h5><center>OMZET Online Monitoring System</center></h5></a>
+          <a href="dashboard.<?php  ?>"><h5><center>OMZET Online Monitoring System</center></h5></a>
           <div class="row small-12">
             <ul class="multilevel-accordion-menu vertical menu" data-accordion-menu>
               <li>
                 <a href="#">Monitoring Data</a>
                 <ul class="menu vertical sublevel-1">
                   <li><a class="subitem" href="monitor_pa.php">Data OMZET Perangkat Aktif</a></li>
-                  <li><a class="subitem" href="monitor_pos.php">Data OMZET Primer/Sekunder</a></li>
+                  <li><a class="subitem" href="monitor_pos.php">Data OMZET Primer / Sekunder</a></li>
                   <li><a class="subitem" href="monitor_odp.php">Data OMZET DP/ODP</a></li>
                 </ul>
               </li>
@@ -40,7 +40,7 @@
                 <a href="#">Inserting Data</a>
                 <ul class="menu vertical sublevel-1">
                   <li><a class="subitem" href="insert_pa.php">Data OMZET Perangkat Aktif</a></li>
-                  <li><a class="subitem" href="insert_pos.php">Data OMZET Primer/Sekunder</a></li>
+                  <li><a class="subitem" href="insert_pos.php">Data OMZET Primer / Sekunder</a></li>
                   <li><a class="subitem" href="insert_odp.php">Data OMZET DP/ODP</a></li>
                 </ul>
               </li>
@@ -103,21 +103,21 @@
               <button type="submit" class="success button large" name="save">Save</button>
             </div>            
           </form>
-			<?php     
-                if (isset($_POST["save"])) { 
-					insertData(2,$_POST['no_telp'],$_POST['no_internet'],$_POST['qr'],$_POST['data_lama'],$_POST['data_baru'],$_POST['keterangan'],$_SESSION['login_user']);
-                }
-			?>
-        </div>
-      </div>
-    </div>
-  </div>
+          <?php     
+          if (isset($_POST["save"])) { 
+           insertData(2,$_POST['no_telp'],$_POST['no_internet'],$_POST['qr'],$_POST['data_lama'],$_POST['data_baru'],$_POST['keterangan'],$_SESSION['login_user']);
+         }
+         ?>
+       </div>
+     </div>
+   </div>
+ </div>
 
-  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-  <script src="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
-  <script>
-    $(document).foundation();
-  </script>
+ <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+ <script src="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+ <script>
+  $(document).foundation();
+</script>
 </body>
 </html>
 

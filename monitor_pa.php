@@ -1,6 +1,6 @@
 <?php
-	include('omom.php');
-	include('session.php');
+include('omom.php');
+include('session.php');
 ?>
 
 <!doctype html>
@@ -22,17 +22,17 @@
     <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
 
       <div class="off-canvas position-left reveal-for-large" id="my-info" data-off-canvas data-position="left">
-        <div class="row column">
+        <div class="medium-12">
           <br>
           <img class="thumbnail" src="http://placehold.it/550x350">
-          <a href="dashboard.php"><h5><center>OMZET Online Monitoring System</center></h5></a>
+          <a href="dashboard.<?php  ?>"><h5><center>OMZET Online Monitoring System</center></h5></a>
           <div class="row small-12">
             <ul class="multilevel-accordion-menu vertical menu" data-accordion-menu>
               <li>
                 <a href="#">Monitoring Data</a>
                 <ul class="menu vertical sublevel-1">
                   <li><a class="subitem" href="monitor_pa.php">Data OMZET Perangkat Aktif</a></li>
-                  <li><a class="subitem" href="monitor_pos.php">Data OMZET Primer/Sekunder</a></li>
+                  <li><a class="subitem" href="monitor_pos.php">Data OMZET Primer / Sekunder</a></li>
                   <li><a class="subitem" href="monitor_odp.php">Data OMZET DP/ODP</a></li>
                 </ul>
               </li>
@@ -40,7 +40,7 @@
                 <a href="#">Inserting Data</a>
                 <ul class="menu vertical sublevel-1">
                   <li><a class="subitem" href="insert_pa.php">Data OMZET Perangkat Aktif</a></li>
-                  <li><a class="subitem" href="insert_pos.php">Data OMZET Primer/Sekunder</a></li>
+                  <li><a class="subitem" href="insert_pos.php">Data OMZET Primer / Sekunder</a></li>
                   <li><a class="subitem" href="insert_odp.php">Data OMZET DP/ODP</a></li>
                 </ul>
               </li>
@@ -59,15 +59,15 @@
         <div class="title-bar hide-for-large">
           <div class="title-bar-left">
             <button class="menu-icon" type="button" data-open="my-info"></button>
-            <a href="dashboard.php"><span class="title-bar-title">OMZET Online Monitoring System</span></a>
+            <span class="title-bar-title">OMZET Online Monitoring System</span>
           </div>
         </div>
         <div class="callout primary">
           <div class="row column">
-            <h2>Monitoring Data OMZET Perangkat Aktif</h2>
+            <h1>Monitoring Data OMZET Perangkat Aktif</h1>
           </div>
         </div>
-        <div class="row small-up-2 medium-up-3 large-up-4">
+        <div class="row medium-12">
           <table>
             <thead>
               <tr>
@@ -80,14 +80,14 @@
                 <th>Status</th>
                 <th>Keterangan</th>
                 <th>Tanggal</th>
-				<th>Issuer</th>
+                <th>Issuer</th>
                 <th>Action</th>
               </tr>
             </thead>
             <tbody>
-				<?php
-					viewData(1);
-				?>
+              <?php
+              viewData(1);
+              ?>
             </tbody>
           </table>
         </div>

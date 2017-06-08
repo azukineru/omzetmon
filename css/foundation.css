@@ -4400,6 +4400,8 @@ a.thumbnail {
 
 .multilevel-accordion-menu .is-accordion-submenu-parent a {
   background: #4d5158;
+  width: 100%;
+  font-size: 14px;
 }
 
 .multilevel-accordion-menu .is-accordion-submenu a {
@@ -4407,7 +4409,7 @@ a.thumbnail {
 }
 
 .multilevel-accordion-menu .sublevel-1 {
-  text-indent: 1rem;
+  text-indent: 0rem;
 }
 
 .multilevel-accordion-menu .sublevel-2 {
@@ -4446,18 +4448,18 @@ a.thumbnail {
 .multilevel-accordion-menu .is-accordion-submenu-parent[aria-expanded="true"] a.subitem::before {
   content: "\f016";
   font-family: FontAwesome;
-  margin-right: 1rem;
+  margin-right: 0.2rem;
 }
 
 .multilevel-accordion-menu .is-accordion-submenu-parent[aria-expanded="true"] a::before {
   content: "\f07c";
   font-family: FontAwesome;
-  margin-right: 1rem;
+  margin-right: 0.2rem;
 }
 
 .multilevel-accordion-menu .is-accordion-submenu-parent[aria-expanded="false"] a::before {
   content: "\f07b";
   font-family: FontAwesome;
-  margin-right: 1rem;
+  margin-right: 0.2rem;
 }
 

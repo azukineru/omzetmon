@@ -5,7 +5,7 @@
 	
 	$user_check=$_SESSION['login_user'];
 	
-	echo $user_check;
+	//echo $user_check;
 	
 	$query=mysqli_query($con, "SELECT username FROM tb_account WHERE username='$user_check'");
 	$row=mysqli_fetch_assoc($query);
