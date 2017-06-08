@@ -1,5 +1,5 @@
 <?php
-	include(database.php);
+	include("database.php");
 
 	session_start();
 	$error='';
@@ -16,9 +16,7 @@
 			$username=mysqli_real_escape_string($con, $username);
 			$password=md5(mysqli_real_escape_string($con, $password));
 			
-			
-			
-			$query=mysqli_query($con, "SELECT * FROM account WHERE username='$username' AND password='$password'");
+			$query=mysqli_query($con, "SELECT * FROM tb_account WHERE username='$username' AND password='$password'");
 			
 			if(mysqli_num_rows($query)==1){
 				$_SESSION['login_user']=$username;
