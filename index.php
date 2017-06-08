@@ -1,3 +1,11 @@
+<?php
+	include('login.php');
+	
+	if(isset($_SESSION['login_user'])){
+		header("Location: dashboard.php");
+	}
+?>
+
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
@@ -13,15 +21,16 @@
     <div class="nav-bar right side-full-height" style="background-color: #99e6ff;">
       <div class="login-form">
         <div class="inner">
-          <form>
+          <form action="" method="post">
             <div class="row large-12 columns">
               <label><h4>Username</h4>
                 <input type="text" name="username" placeholder="username" required />
               </label>
               <label><h4>Password</h4>
                 <input type="password" name="password" placeholder="password" required />
-              </label>
-              <button class="button" type="submit">Login</button>
+              </label>			  
+              <button class="button" type="submit" name="login">Login</button>	  
+			  <span><?php echo $error?></span>
             </div>
           </form>
         </div>

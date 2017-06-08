@@ -1,3 +1,7 @@
+<?
+	include('session.php');
+?>
+
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
@@ -20,7 +24,7 @@
         <div class="row column">
           <br>
           <img class="thumbnail" src="http://placehold.it/550x350">
-          <a href="dashboard.php"><h5><center>OMZET Online Monitoring System</center></h5></a>
+          <h5><center>OMZET Online Monitoring System</center></h5>
           <div class="row small-12">
             <ul class="multilevel-accordion-menu vertical menu" data-accordion-menu>
               <li>
@@ -54,7 +58,7 @@
         <div class="title-bar hide-for-large">
           <div class="title-bar-left">
             <button class="menu-icon" type="button" data-open="my-info"></button>
-            <a href="dashboard.php"><span class="title-bar-title">OMZET Online Monitoring System</span></a>
+            <span class="title-bar-title">OMZET Online Monitoring System</span>
           </div>
         </div>
         <div class="callout primary">
