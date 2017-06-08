@@ -1,5 +1,5 @@
 <?php
-	include('session.php');
+include('session.php');
 ?>
 
 <!doctype html>
@@ -16,7 +16,9 @@
 
   <div class="off-canvas-wrapper">
     <div class="large-12">
-      <h4>Profile</h4>
+      <div class="row small-3">
+        <h4>Profile</h4>
+      </div>
     </div>
     <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
 
@@ -24,7 +26,7 @@
         <div class="medium-12">
           <br>
           <img class="thumbnail" src="http://placehold.it/550x350">
-          <a href="dashboard.<?php  ?>"><h5><center>Mo-Z Monitoring OMZET</center></h5></a>
+          <a href="dashboard.php"><h5><center>Mo-Z Monitoring OMZET</center></h5></a>
           <div class="row small-12">
             <ul class="multilevel-accordion-menu vertical menu" data-accordion-menu>
               <li>
@@ -67,7 +69,7 @@
           </div>
         </div>
         <div class="row medium-12">
-          
+
 
         </div>
       </div>
