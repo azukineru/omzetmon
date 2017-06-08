@@ -8,7 +8,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OM-OMS | Inserting Data OMZET Perangkat Aktif</title>
+  <title>OM-OMS | Update Data OMZET</title>
 
   <link rel="stylesheet" href="css/foundation.css">
   <link rel="stylesheet" href="css/app.css">
@@ -64,51 +64,14 @@
         </div>
         <div class="callout primary">
           <div class="row column">
-            <h2>Inserting Data OMZET Perangkat Aktif</h2>
+            <h2>Update Data OMZET</h2>
           </div>
         </div>
         <div class="row large-12">
-          <form action="" method="post">
-            <div class="row">
-              <div class="medium-6">
-                <label>No. Telepon
-                  <input type="text" name="no_telp" required>
-                </label>
-              </div>
-              <div class="medium-6">
-                <label>No. Internet
-                  <input type="text" name="no_internet" required>
-                </label>
-              </div>
-              <div class="medium-6">
-                <label>QR Code
-                  <input type="text" name="qr" required>
-                </label>
-              </div>
-              <div class="medium-6">
-                <label>Data Lama
-                  <input type="text" name="data_lama" required>
-                </label>
-              </div>
-              <div class="medium-6">
-                <label>Data Baru
-                  <input type="text" name="data_baru" required>
-                </label>
-              </div>
-              <div class="medium-6">
-                <label>Keterangan
-                  <input type="text" name="keterangan">
-                </label>
-              </div>
-              <button type="submit" class="success button large" name="save">Save</button>
-            </div>            
-          </form>
-		  
-			<?php     
-                if (isset($_POST["save"])) { 
-					insertData(1,$_POST['no_telp'],$_POST['no_internet'],$_POST['qr'],$_POST['data_lama'],$_POST['data_baru'],$_POST['keterangan'],$_SESSION['login_user']);
-                }
-			?>
+            
+			<?php  
+				updateData($_GET['id'],$_SESSION['login_user']);
+			?> 
 			
         </div>
       </div>

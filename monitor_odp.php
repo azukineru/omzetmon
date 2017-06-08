@@ -1,3 +1,8 @@
+<?php
+	include('omom.php');
+	include('session.php');
+?>
+
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
@@ -42,7 +47,7 @@
               <li>
                 <a href="#">Activity History</a>
                 <ul class="menu vertical sublevel-1">
-                  <li><a class="subitem" href="#">See Activity History</a></li>
+                  <li><a class="subitem" href="history.php">See Activity History</a></li>
                 </ul>
               </li>
             </ul>
@@ -66,22 +71,23 @@
           <table>
             <thead>
               <tr>
-                <th>No.</th>
+                <th>id</th>
                 <th>No. Telp</th>
                 <th>No. Internet</th>
-                <th>QR Code</th>
-                <th>Data Baru</th>
+                <th>QR</th>
                 <th>Data Lama</th>
+                <th>Data Baru</th>
                 <th>Status</th>
                 <th>Keterangan</th>
                 <th>Tanggal</th>
+				<th>Issuer</th>
                 <th>Action</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-              <td>1</td><td>024123456</td>
-              </tr>
+				<?php
+					viewData(3);
+				?>
             </tbody>
           </table>
         </div>

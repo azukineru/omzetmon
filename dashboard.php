@@ -46,7 +46,7 @@
               <li>
                 <a href="#">Activity History</a>
                 <ul class="menu vertical sublevel-1">
-                  <li><a class="subitem" href="#">See Activity History</a></li>
+                  <li><a class="subitem" href="history.php">See Activity History</a></li>
                 </ul>
               </li>
             </ul>

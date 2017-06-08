@@ -1,3 +1,8 @@
+<?php
+	include('session.php');
+	include('omom.php');
+?>
+
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
@@ -42,7 +47,7 @@
               <li>
                 <a href="#">Activity History</a>
                 <ul class="menu vertical sublevel-1">
-                  <li><a class="subitem" href="#">See Activity History</a></li>
+                  <li><a class="subitem" href="history.php">See Activity History</a></li>
                 </ul>
               </li>
             </ul>
@@ -63,42 +68,48 @@
           </div>
         </div>
         <div class="row large-12">
-          <form>
+          <form action="" method="post">
             <div class="row">
               <div class="medium-6">
                 <label>No. Telepon
-                  <input type="text" required>
+                  <input type="text" name="no_telp" required>
                 </label>
               </div>
               <div class="medium-6">
                 <label>No. Internet
-                  <input type="text" required>
+                  <input type="text" name="no_internet" required>
                 </label>
               </div>
               <div class="medium-6">
                 <label>QR Code
-                  <input type="text" required>
+                  <input type="text" name="qr" required>
                 </label>
               </div>
               <div class="medium-6">
-                <label>Data OMZET Baru
-                  <input type="text" required>
+                <label>Data Lama
+                  <input type="text" name="data_lama" required>
                 </label>
               </div>
               <div class="medium-6">
-                <label>Data OMZET Lama
-                  <input type="text" required>
+                <label>Data Baru
+                  <input type="text" name="data_baru" required>
                 </label>
               </div>
               <div class="medium-6">
                 <label>Keterangan
-                  <input type="text">
+                  <input type="text" name="keterangan">
                 </label>
               </div>
-              <button type="submit" class="success button large">Save</button>
-            </div>
-            
+              <button type="submit" class="success button large" name="save">Save</button>
+            </div>            
           </form>
+		  
+			<?php     
+                if (isset($_POST["save"])) { 
+					insertData(3,$_POST['no_telp'],$_POST['no_internet'],$_POST['qr'],$_POST['data_lama'],$_POST['data_baru'],$_POST['keterangan'],$_SESSION['login_user']);
+                }
+			?> 
+			
         </div>
       </div>
     </div>
