@@ -64,7 +64,7 @@
 			default:
 		}
 		
-		$query=mysqli_query($con, "SELECT * FROM ".$tb);
+		$query=mysqli_query($con, "SELECT * FROM ".$tb." ORDER BY tanggal DESC");
 					
 		if(mysqli_num_rows($query)>0){
 			while ($row = mysqli_fetch_array($query)){
@@ -189,7 +189,7 @@
 		  
 		if (isset($_POST["update"])) { 
 			$query="INSERT INTO tb_history (id, no_telp, no_internet, qr, data_lama, data_baru, status, keterangan, issuer, followup)
-					VALUES ('".$row['id']."', '".$row['no_telp']."', '".$row['no_internet']."', '".$row['qr']."', '".$row['data_lama']."', '".$row['data_baru']."', '".$_POST['status']."', '".$row['keterangan']."', '".$row['issuer']."', '".$followup."')";
+					VALUES ('".$row['id']."', '".$row['no_telp']."', '".$row['no_internet']."', '".$row['qr']."', '".$row['data_lama']."', '".$row['data_baru']."', '".$_POST['status']."', '".$_POST['keterangan']."', '".$row['issuer']."', '".$followup."')";
 		
 			if ($con->query($query) == TRUE){
 
