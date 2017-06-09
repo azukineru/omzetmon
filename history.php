@@ -12,8 +12,9 @@ include('omom.php');
 
   <link rel="stylesheet" href="css/foundation.css">
   <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/pace.css" />
   <link rel="stylesheet" type="text/css" href="font/foundation-icons.css" />
-  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet" type='text/css'>
 </head>
 <body>
 
@@ -31,8 +32,10 @@ include('omom.php');
       <div class="off-canvas position-left reveal-for-large" id="my-info" data-off-canvas data-position="left">
         <div class="medium-12">
           <br>
-          <img class="thumbnail" src="http://placehold.it/550x350">
-          <a href="dashboard.php"><h5><center>Mo-Z Monitoring OMZET</center></h5></a>
+          <div class="row medium-8">
+            <img class="thumbnail" src="image/omzet.jpg">
+          </div>
+          <a href="dashboard.php"><h5 style="color:white"><center>Mo-Z Monitoring OMZET</center></h5></a>
           <div class="row small-12">
             <ul class="multilevel-accordion-menu vertical menu" data-accordion-menu>
               <li>
@@ -104,6 +107,7 @@ include('omom.php');
 
   <script src="js/vendor/jquery.js"></script>
   <script src="js/vendor/foundation.js"></script>
+  <script src="js/vendor/pace.min.js"></script>
   <script>
     $(document).foundation();
   </script>

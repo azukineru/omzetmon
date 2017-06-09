@@ -15,13 +15,17 @@ if(isset($_SESSION['login_user'])){
   <link rel="stylesheet" href="css/foundation.css" />
   <link rel="stylesheet" href="css/app.css" />
   <link rel="stylesheet" href="css/custom.css" />
-  <script src="bower_components/modernizr/modernizr.js"></script>
+  <link rel="stylesheet" href="css/pace.css" />
 </head>
+
 <body style="background-image: url('image/bg.jpg'); background-size: 100%; background-position: bottom left;">
   <div class="off-canvas-wrap" >
     <div class="float-right side-full-height">
-      <div class="small-12">
+      <div class="row small-12">
         <img src="image/logo-telkom.png">
+      </div>
+      <div class="row small-7">
+        <img src="image/daman.png">
       </div>
       <div class="login-form">
         <div class="inner">
@@ -44,5 +48,6 @@ if(isset($_SESSION['login_user'])){
 
   <script src="js/vendor/jquery.js"></script>
   <script src="js/vendor/foundation.js"></script>
+  <script src="js/vendor/pace.min.js"></script>
 </body>
 </html>
