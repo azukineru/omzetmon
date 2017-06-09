@@ -77,7 +77,7 @@ include('omom.php');
             <h2>Activity History</h2>
           </div>
         </div>
-        <div class="row small-up-2 medium-up-3 large-up-4">
+        <div class="row medium-12">
           <table>
             <thead>
               <tr>

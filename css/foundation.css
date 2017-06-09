@@ -3500,6 +3500,7 @@ html.is-reveal-open body {
 
 table {
   width: 100%;
+  font-size: 70%;
   margin-bottom: 1rem;
   border-radius: 0; }
   table thead,

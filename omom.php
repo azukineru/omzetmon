@@ -64,7 +64,12 @@
 			default:
 		}
 		
-		$query=mysqli_query($con, "SELECT * FROM ".$tb." ORDER BY tanggal DESC");
+		if($opt==1 || $opt==2 || $opt==3){		
+			$query=mysqli_query($con, "SELECT * FROM ".$tb);
+		}
+		else{
+			$query=mysqli_query($con, "SELECT * FROM `tb_history` ORDER BY `tb_history`.`tanggal` DESC ");
+		}
 					
 		if(mysqli_num_rows($query)>0){
 			while ($row = mysqli_fetch_array($query)){
