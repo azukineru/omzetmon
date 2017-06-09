@@ -1,9 +1,18 @@
 .side-full-height{
 	width: 25%;
 	height: 100vh;
+	background-color: #99e6ff;
+}
+
+.logo-telkom{
+	height: 50px;
+	background-image: url('../image/logo-telkom.png');
+	background-size: 100%;
+	background-position: top left;
+	background-repeat: no-repeat;
 }
 
 .login-form{
 	position: relative;
-	top: 50%;
+	top: 20%;
 }

@@ -1,10 +1,5 @@
 <?php	
 
-	if(ctype_digit('123'))
-		echo 'lala';
-	else
-		echo'po';
-	
 	function insertData($opt, $notelp, $noint, $qr, $datalama, $databaru, $keterangan, $issuer){
 		include('database.php');
 		

@@ -19,7 +19,10 @@ if(isset($_SESSION['login_user'])){
 </head>
 <body style="background-image: url('image/bg.jpg'); background-size: 100%; background-position: bottom left;">
   <div class="off-canvas-wrap" >
-    <div class="float-right side-full-height" style="background-color: #99e6ff;">
+    <div class="float-right side-full-height">
+      <div class="small-12">
+        <img src="image/logo-telkom.png">
+      </div>
       <div class="login-form">
         <div class="inner">
           <form action="" method="post">

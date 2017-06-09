@@ -11,13 +11,18 @@ include('session.php');
 
   <link rel="stylesheet" href="css/foundation.css">
   <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" type="text/css" href="font/foundation-icons.css" />
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
 </head>
 <body>
 
   <div class="off-canvas-wrapper">
     <div class="large-12">
-      <div class="row small-3">
-        <h4>Profile</h4>
+      <div class="row small-2 small-offset-10 show-for-large">
+        <h4>Hi, user | <a href="logout.php">Log out</a></h4>
+      </div>
+      <div class="row small-6 small-offset-6 hide-for-large">
+        <h4>Hi, user | <a href="logout.php">Log out</a></h4>
       </div>
     </div>
     <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
