@@ -20,10 +20,10 @@ include('session.php');
   <div class="off-canvas-wrapper">
     <div class="large-12">
       <div class="row small-2 small-offset-10 show-for-large">
-        <h4>Hi, user | <a href="logout.php">Log out</a></h4>
+        <h4>Hi, <?php echo $_SESSION['login_user']; ?> | <a href="logout.php">Log out</a></h4>
       </div>
       <div class="row small-6 small-offset-6 hide-for-large">
-        <h4>Hi, user | <a href="logout.php">Log out</a></h4>
+        <h4>Hi, <?php echo $_SESSION['login_user']; ?> | <a href="logout.php">Log out</a></h4>
       </div>
     </div>
     <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
