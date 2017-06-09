@@ -12,6 +12,7 @@ include('omom.php');
 
   <link rel="stylesheet" href="css/foundation.css">
   <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/custom.css">
   <link rel="stylesheet" href="css/pace.css" />
   <link rel="stylesheet" type="text/css" href="font/foundation-icons.css" />
   <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet" type='text/css'>
@@ -19,12 +20,12 @@ include('omom.php');
 <body>
 
   <div class="off-canvas-wrapper">
-    <div class="large-12">
+    <div class="large-12 bg-black">
       <div class="row small-2 small-offset-10 show-for-large">
-        <h4>Hi, <?php echo $_SESSION['login_user']; ?> | <a href="logout.php">Log out</a></h4>
+        <h5>Hi, <?php echo $_SESSION['login_user']; ?> | <a href="logout.php">Log out</a></h5>
       </div>
       <div class="row small-6 small-offset-6 hide-for-large">
-        <h4>Hi, <?php echo $_SESSION['login_user']; ?> | <a href="logout.php">Log out</a></h4>
+        <h5>Hi, <?php echo $_SESSION['login_user']; ?> | <a href="logout.php">Log out</a></h5>
       </div>
     </div>
     <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>

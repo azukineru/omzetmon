@@ -1,18 +1,47 @@
+.index-body{
+	background-image: url('../image/bg.jpg');
+	background-size: 100%;
+	background-position: bottom left;
+	background-repeat: no-repeat;
+}
+
 .side-full-height{
 	width: 25%;
 	height: 100vh;
 	background-color: #99e6ff;
 }
+.side-full-height{
+	-webkit-box-shadow: 0px -10px 10px #000;
+	-moz-box-shadow: 0px -10px 10px #000;
+	box-shadow: 0px -15px 15px #000;
+}
 
-.logo-telkom{
-	height: 50px;
-	background-image: url('../image/logo-telkom.png');
-	background-size: 100%;
-	background-position: top left;
-	background-repeat: no-repeat;
+@media screen and (max-width: 400px){
+	.side-full-height{
+		width: 100%;
+		height: auto;
+	}
 }
 
 .login-form{
 	position: relative;
 	top: 5%;
+}
+
+.inner{
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+.bg-red{
+	background-color: red;
+	color: white;
+}
+.bg-black{
+	background-color: black;
+	color: white;
+}
+.bg-grey{
+	background-color: #6f6f6f;
+	color: white;
 }

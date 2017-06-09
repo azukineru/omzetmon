@@ -18,7 +18,7 @@ if(isset($_SESSION['login_user'])){
   <link rel="stylesheet" href="css/pace.css" />
 </head>
 
-<body style="background-image: url('image/bg.jpg'); background-size: 100%; background-position: bottom left;">
+<body class="index-body">
   <div class="off-canvas-wrap" >
     <div class="float-right side-full-height">
       <div class="row small-12">
