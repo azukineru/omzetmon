@@ -6,15 +6,14 @@
 }
 
 .side-full-height{
-	width: 25%;
 	height: 100vh;
 	background-color: #99e6ff;
-}
-.side-full-height{
 	-webkit-box-shadow: 0px -10px 10px #000;
 	-moz-box-shadow: 0px -10px 10px #000;
 	box-shadow: 0px -15px 15px #000;
+	overflow-y: auto;
 }
+
 
 @media screen and (max-width: 400px){
 	.side-full-height{

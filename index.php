@@ -20,23 +20,26 @@ if(isset($_SESSION['login_user'])){
 
 <body class="index-body">
   <div class="off-canvas-wrap" >
-    <div class="float-right side-full-height">
-      <div class="row small-12">
+    <div class="float-right large-3 side-full-height">
+      <div class="row small-10">
         <img src="image/logo-telkom.png">
       </div>
-      <div class="row small-7">
+      <div class="row small-5">
         <img src="image/daman.png">
       </div>
       <div class="login-form">
         <div class="inner">
           <form action="" method="post">
             <div class="row large-12 columns">
-              <label><h4>Username</h4>
-                <input type="text" name="username" placeholder="Username" required />
+              <label><h5>Username</h5>
+                <input type="text" name="username" placeholder="Username" value="<?php if(isset($_COOKIE["member_login"])) { echo $_COOKIE["member_login"]; } ?>" required />
               </label>
-              <label><h4>Password</h4>
-                <input type="password" name="password" placeholder="Password" required />
-              </label>			  
+              <label><h5>Password</h5>
+                <input type="password" name="password" placeholder="Password" value="<?php if(isset($_COOKIE["member_password"])) { echo $_COOKIE["member_password"]; } ?>" required />
+              </label>
+              <input id="remember" type="checkbox" <?php if(isset($_COOKIE["member_login"])) { ?> checked <?php } ?> ><label>Remember Me</label>
+              <label>Don't have account ? <a href="registration.php">Sign Up here</a></label>
+              <br>
               <button class="button" type="submit" name="login">Login</button>	  
               <span><?php echo $error?></span>
             </div>
