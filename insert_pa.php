@@ -21,11 +21,11 @@ include('omom.php');
 
   <div class="off-canvas-wrapper">
     <div class="large-12 bg-black">
-      <div class="row small-2 small-offset-10 show-for-large">
-        <h5>Hi, <?php echo $_SESSION['login_user']; ?> | <a href="logout.php">Log out</a></h5>
+      <div class="row small-3 small-offset-9 show-for-large">
+        <h5>Hi, <?php echo $_SESSION['login_user']; ?> | <a href="settings.php">Settings</a> | <a href="logout.php">Log out</a></h5>
       </div>
-      <div class="row small-6 small-offset-6 hide-for-large">
-        <h5>Hi, <?php echo $_SESSION['login_user']; ?> | <a href="logout.php">Log out</a></h5>
+      <div class="row small-8 small-offset-4 hide-for-large">
+        <h5>Hi, <?php echo $_SESSION['login_user']; ?> | <a href="settings.php">Settings</a> | <a href="logout.php">Log out</a></h5>
       </div>
     </div>
     <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
@@ -79,41 +79,43 @@ include('omom.php');
           </div>
         </div>
         <div class="row large-12">
-          <form action="" method="post">
-            <div class="row">
-              <div class="medium-6">
-                <label>No. Telepon
-                  <input type="text" name="no_telp" value="<?php echo isset($_POST['no_telp']) ? $_POST['no_telp'] : '' ?>" required>
-                </label>
-              </div>
-              <div class="medium-6">
-                <label>No. Internet
-                  <input type="text" name="no_internet" value="<?php echo isset($_POST['no_internet']) ? $_POST['no_internet'] : '' ?>" required>
-                </label>
-              </div>
-              <div class="medium-6">
-                <label>QR Code
-                  <input type="text" name="qr" value="<?php echo isset($_POST['qr']) ? $_POST['qr'] : '' ?>" required>
-                </label>
-              </div>
-              <div class="medium-6">
-                <label>Data Lama
-                  <input type="text" name="data_lama" value="<?php echo isset($_POST['data_lama']) ? $_POST['data_lama'] : '' ?>" required>
-                </label>
-              </div>
-              <div class="medium-6">
-                <label>Data Baru
-                  <input type="text" name="data_baru" value="<?php echo isset($_POST['data_baru']) ? $_POST['data_baru'] : '' ?>" required>
-                </label>
-              </div>
-              <div class="medium-6">
-                <label>Keterangan
-                  <input type="text" name="keterangan" value="<?php echo isset($_POST['keterangan']) ? $_POST['keterangan'] : '' ?>">
-                </label>
-              </div>
-              <button type="submit" class="success button large" name="save">Save</button>
-            </div>            
-          </form>
+          <div class="inner">
+            <form action="" method="post">
+              <div class="row">
+                <div class="medium-6">
+                  <label>No. Telepon
+                    <input type="text" name="no_telp" value="<?php echo isset($_POST['no_telp']) ? $_POST['no_telp'] : '' ?>" required>
+                  </label>
+                </div>
+                <div class="medium-6">
+                  <label>No. Internet
+                    <input type="text" name="no_internet" value="<?php echo isset($_POST['no_internet']) ? $_POST['no_internet'] : '' ?>" required>
+                  </label>
+                </div>
+                <div class="medium-6">
+                  <label>QR Code
+                    <input type="text" name="qr" value="<?php echo isset($_POST['qr']) ? $_POST['qr'] : '' ?>" required>
+                  </label>
+                </div>
+                <div class="medium-6">
+                  <label>Data Lama
+                    <input type="text" name="data_lama" value="<?php echo isset($_POST['data_lama']) ? $_POST['data_lama'] : '' ?>" required>
+                  </label>
+                </div>
+                <div class="medium-6">
+                  <label>Data Baru
+                    <input type="text" name="data_baru" value="<?php echo isset($_POST['data_baru']) ? $_POST['data_baru'] : '' ?>" required>
+                  </label>
+                </div>
+                <div class="medium-6">
+                  <label>Keterangan
+                    <input type="text" name="keterangan" value="<?php echo isset($_POST['keterangan']) ? $_POST['keterangan'] : '' ?>">
+                  </label>
+                </div>
+                <button type="submit" class="success button large" name="save">Save</button>
+              </div>            
+            </form>
+          </div>
 
           <?php     
           if (isset($_POST["save"])) {

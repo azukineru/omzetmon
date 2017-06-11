@@ -1,6 +1,6 @@
 <?php
-	include('session.php');
-	include('omom.php');
+include('session.php');
+include('omom.php');
 ?>
 
 <!doctype html>
@@ -21,11 +21,11 @@
 
   <div class="off-canvas-wrapper">
     <div class="large-12 bg-black">
-      <div class="row small-2 small-offset-10 show-for-large">
-        <h5>Hi, <?php echo $_SESSION['login_user']; ?> | <a href="logout.php">Log out</a></h5>
+      <div class="row small-3 small-offset-9 show-for-large">
+        <h5>Hi, <?php echo $_SESSION['login_user']; ?> | <a href="settings.php">Settings</a> | <a href="logout.php">Log out</a></h5>
       </div>
-      <div class="row small-6 small-offset-6 hide-for-large">
-        <h5>Hi, <?php echo $_SESSION['login_user']; ?> | <a href="logout.php">Log out</a></h5>
+      <div class="row small-8 small-offset-4 hide-for-large">
+        <h5>Hi, <?php echo $_SESSION['login_user']; ?> | <a href="settings.php">Settings</a> | <a href="logout.php">Log out</a></h5>
       </div>
     </div>
     <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
@@ -79,22 +79,22 @@
           </div>
         </div>
         <div class="row large-12">
-            
-			<?php  
-				updateData($_GET['id'],$_SESSION['login_user']);
-			?> 
-			
-        </div>
-      </div>
-    </div>
-  </div>
+          <div class="inner">
+           <?php  
+           updateData($_GET['id'],$_SESSION['login_user']);
+           ?> 
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
 
-  <script src="js/vendor/jquery.js"></script>
-  <script src="js/vendor/foundation.js"></script>
-  <script src="js/vendor/pace.min.js"></script>
-  <script>
-    $(document).foundation();
-  </script>
+ <script src="js/vendor/jquery.js"></script>
+ <script src="js/vendor/foundation.js"></script>
+ <script src="js/vendor/pace.min.js"></script>
+ <script>
+  $(document).foundation();
+</script>
 </body>
 </html>
 

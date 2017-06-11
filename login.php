@@ -2,7 +2,7 @@
 	include("database.php");
 
 	session_start();
-	$error='';
+	$error='<br>';
 	
 	if(isset($_POST['login'])){
 		if(empty($_POST['username'])||empty($_POST['password'])){

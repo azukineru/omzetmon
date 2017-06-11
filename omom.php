@@ -34,7 +34,7 @@
 			
 			echo
 			'<script>
-				alert("Data Berhasil Disimpan dengan id: '.$id.'");
+				alert("Data is successfully saved with ID : '.$id.'");
 				window.location.href = "'.$href.'";
 			</script>';
 		} else {
@@ -114,7 +114,7 @@
 		}else{
 			echo 
 			'<tr>
-			 <td colspan="10" style="text-align:center">Tidak ada data saat ini</td>
+			 <td colspan="10" style="text-align:center">There is no data at the moment.</td>
 			 </tr>';
 		}
 	}
@@ -204,7 +204,7 @@
 				
 				echo
 					'<script>
-						alert("Data '.$id.' Berhasil Diupdate");
+						alert("Data '.$id.' is successfully updated.");
 						window.location.href = "'.$href.'";
 					</script>';
 			} else {
