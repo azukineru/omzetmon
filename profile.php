@@ -7,7 +7,7 @@ include('session.php');
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OMOM | Settings</title>
+  <title>OMOM | Profile</title>
 
   <link rel="stylesheet" href="css/foundation.css">
   <link rel="stylesheet" href="css/app.css">
@@ -75,82 +75,18 @@ include('session.php');
         </div>
         <div class="callout primary">
           <div class="row column">
-            <h1>OMOM |  Settings</h1>            
+            <h1>Profile Name</h1>            
           </div>
         </div>
         <div class="row medium-12">
           <div class="inner">
+
             <div class="row medium-6">
-              <h4>General Settings</h4>
-
-              <form data-abide novalidate>
-                <div class="medium-6 columns">
-                  First Name: <input id="fname" type="text" name="fname" placeholder="" required>
-                  <span class="form-error">
-                    I'm required!
-                  </span>
-                </div>
-                <div class="medium-6 columns">
-                  Last Name: <input id="lname" type="text" name="fname" placeholder="" required>
-                  <span class="form-error">
-                    I'm required!
-                  </span>
-                </div>
-                <div class="medium-12 columns">
-                  Password: <input id="password" type="password" name="fname" placeholder="" pattern=".{6,}" required>
-                  <span class="form-error">
-                    Please enter at least 6 characters as your password!
-                  </span>
-                </div>
-                <div class="medium-12 columns">
-                  Re-enter Password: <input type="password" name="repassword" placeholder="" required pattern="alpha_numeric" data-equalto="password">
-                  <span class="form-error">
-                    Hey, passwords are supposed to match!
-                  </span>
-                </div>
-                <div class="medium-12 columns">
-                  Phone Number: <input id="phone" type="text" name="fname" placeholder="" pattern="number">
-                  <span class="form-error">
-                    Enter number only!
-                  </span>
-                </div>
-                <div class="medium-12 columns">
-                  <button class="button" type="submit" value="Submit">Save</button>
-                </div>
-              </form>
-
+              <p>Email : xxx@gmail.com</p>
+              <p>Phone Number : +62812345678</p>
+              <p>Account Type : HD Daman</p>
             </div>
 
-            <div class="row medium-12">
-              <h4>Admin Settings</h4>
-              <p>This is the list of all users who have tried to register to OMOM</p>
-
-              <table>
-                <thead>
-                  <th>User ID</th>
-                  <th>First Name</th>
-                  <th>Last Name</th>
-                  <th>Email</th>
-                  <th>Account Type</th>
-                  <th>Action</th>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1001</td>
-                    <td>Abdul</td>
-                    <td>Mubarok</td>
-                    <td>mubarok@telkom.co.id</td>
-                    <td>HD Daman</td>
-                    <td>
-                      <center>
-                      <button type="button" class="button">Approve</button> | <button type="button" class="alert button">Reject</button>
-                      </center>
-                    </td>
-                  </tr>
-
-                </tbody>
-              </table>
-            </div>
           </div>
         </div>
       </div>

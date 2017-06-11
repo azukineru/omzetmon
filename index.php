@@ -11,7 +11,7 @@ if(isset($_SESSION['login_user'])){
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MO-Z | Monitor Omzet</title>
+  <title>OMOM | Monitor Omzet</title>
   <link rel="stylesheet" href="css/foundation.css" />
   <link rel="stylesheet" href="css/app.css" />
   <link rel="stylesheet" href="css/custom.css" />

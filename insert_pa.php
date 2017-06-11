@@ -8,7 +8,7 @@ include('omom.php');
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mo-Z | Inserting Data OMZET Perangkat Aktif</title>
+  <title>OMOM | Inserting Data OMZET Perangkat Aktif</title>
 
   <link rel="stylesheet" href="css/foundation.css">
   <link rel="stylesheet" href="css/app.css">
@@ -22,10 +22,10 @@ include('omom.php');
   <div class="off-canvas-wrapper">
     <div class="large-12 bg-black">
       <div class="row small-3 small-offset-9 show-for-large">
-        <h5>Hi, <?php echo $_SESSION['login_user']; ?> | <a href="settings.php">Settings</a> | <a href="logout.php">Log out</a></h5>
+        <h5>Hi, <a href="profile.php"><?php echo $_SESSION['login_user']; ?></a> | <a href="settings.php">Settings</a> | <a href="logout.php">Log out</a></h5>
       </div>
       <div class="row small-8 small-offset-4 hide-for-large">
-        <h5>Hi, <?php echo $_SESSION['login_user']; ?> | <a href="settings.php">Settings</a> | <a href="logout.php">Log out</a></h5>
+        <h5>Hi, <a href="profile.php"><?php echo $_SESSION['login_user']; ?></a> | <a href="settings.php">Settings</a> | <a href="logout.php">Log out</a></h5>
       </div>
     </div>
     <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
@@ -36,7 +36,7 @@ include('omom.php');
           <div class="row medium-8">
             <img class="thumbnail" src="image/omzet.jpg">
           </div>
-          <a href="dashboard.php"><h5 style="color:white"><center>Mo-Z Monitoring OMZET</center></h5></a>
+          <a href="dashboard.php"><h5 style="color:white"><center>OMZET Online Monitoring System</center></h5></a>
           <div class="row small-12">
             <ul class="multilevel-accordion-menu vertical menu" data-accordion-menu>
               <li>
@@ -83,6 +83,28 @@ include('omom.php');
             <form action="" method="post">
               <div class="row">
                 <div class="medium-6">
+                  <label>Select STO
+                    <select>
+                      <option value="sto1">1</option>
+                      <option value="sto2">2</option>
+                      <option value="sto3">3</option>
+                      <option value="sto4">4</option>
+                      <option value="sto5">5</option>
+                      <option value="sto6">6</option>
+                      <option value="sto7">7</option>
+                      <option value="sto8">8</option>
+                      <option value="sto9">9</option>
+                      <option value="sto10">10</option>
+                      <option value="sto11">11</option>
+                      <option value="sto12">12</option>
+                      <option value="sto13">13</option>
+                      <option value="sto14">14</option>
+                      <option value="sto15">15</option>
+                      <option value="sto16">16</option>
+                    </select>
+                  </label>
+                </div>
+                <div class="medium-6">
                   <label>No. Telepon
                     <input type="text" name="no_telp" value="<?php echo isset($_POST['no_telp']) ? $_POST['no_telp'] : '' ?>" required>
                   </label>
@@ -112,7 +134,7 @@ include('omom.php');
                     <input type="text" name="keterangan" value="<?php echo isset($_POST['keterangan']) ? $_POST['keterangan'] : '' ?>">
                   </label>
                 </div>
-                <button type="submit" class="success button large" name="save">Save</button>
+                <button type="submit" class="button large" name="save">Save</button>
               </div>            
             </form>
           </div>
@@ -120,7 +142,7 @@ include('omom.php');
           <?php     
           if (isset($_POST["save"])) {
            if(ctype_digit($_POST['no_telp']) && ctype_digit($_POST['no_internet'])){
-            insertData(3,$_POST['no_telp'],$_POST['no_internet'],$_POST['qr'],$_POST['data_lama'],$_POST['data_baru'],$_POST['keterangan'],$_SESSION['login_user']);
+            insertData(1,$_POST['no_telp'],$_POST['no_internet'],$_POST['qr'],$_POST['data_lama'],$_POST['data_baru'],$_POST['keterangan'],$_SESSION['login_user']);
           }else{
             echo
             '<script>

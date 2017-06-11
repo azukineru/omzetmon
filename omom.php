@@ -188,7 +188,7 @@
 					</select>
                 </label>
               </div>
-              <button type="submit" class="success button large" name="update">Update</button>
+              <button type="submit" class="button large" name="update">Update</button>
             </div>            
           </form>';
 		  

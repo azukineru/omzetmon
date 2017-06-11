@@ -8,7 +8,7 @@ include('omom.php');
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mo-Z | OMZET Activity History</title>
+  <title>OMOM | OMZET Activity History</title>
 
   <link rel="stylesheet" href="css/foundation.css">
   <link rel="stylesheet" href="css/app.css">
@@ -22,10 +22,10 @@ include('omom.php');
   <div class="off-canvas-wrapper">
     <div class="large-12 bg-black">
       <div class="row small-3 small-offset-9 show-for-large">
-        <h5>Hi, <?php echo $_SESSION['login_user']; ?> | <a href="settings.php">Settings</a> | <a href="logout.php">Log out</a></h5>
+        <h5>Hi, <a href="profile.php"><?php echo $_SESSION['login_user']; ?></a> | <a href="settings.php">Settings</a> | <a href="logout.php">Log out</a></h5>
       </div>
       <div class="row small-8 small-offset-4 hide-for-large">
-        <h5>Hi, <?php echo $_SESSION['login_user']; ?> | <a href="settings.php">Settings</a> | <a href="logout.php">Log out</a></h5>
+        <h5>Hi, <a href="profile.php"><?php echo $_SESSION['login_user']; ?></a> | <a href="settings.php">Settings</a> | <a href="logout.php">Log out</a></h5>
       </div>
     </div>
     <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
@@ -36,7 +36,7 @@ include('omom.php');
           <div class="row medium-8">
             <img class="thumbnail" src="image/omzet.jpg">
           </div>
-          <a href="dashboard.php"><h5 style="color:white"><center>Mo-Z Monitoring OMZET</center></h5></a>
+          <a href="dashboard.php"><h5 style="color:white"><center>OMZET Online Monitoring System</center></h5></a>
           <div class="row small-12">
             <ul class="multilevel-accordion-menu vertical menu" data-accordion-menu>
               <li>
@@ -79,40 +79,78 @@ include('omom.php');
           </div>
         </div>
         <div class="row medium-12">
-          <table>
-            <thead>
-              <tr>
-                <th>id</th>
-                <th>No. Telp</th>
-                <th>No. Internet</th>
-                <th>QR</th>
-                <th>Data Lama</th>
-                <th>Data Baru</th>
-                <th>Status</th>
-                <th>Keterangan</th>
-                <th>Timestamp</th>
-                <th>Issuer</th>
-                <th>FollowUp</th>
-              </tr>
-            </thead>
-            <tbody>
-              <?php
-              viewData(4);
-              ?>
-            </tbody>
-          </table>
+          <p class="inner">Download Data Summary: 
+            <form>
+              <div class="medium-3 columns inner">
+                <select>
+                  <option value="jan">January</option>
+                  <option value="feb">February</option>
+                  <option value="mar">March</option>
+                  <option value="apr">April</option>
+                  <option value="may">May</option>
+                  <option value="jun">June</option>
+                  <option value="jul">July</option>
+                  <option value="aug">August</option>
+                  <option value="sep">September</option>
+                  <option value="oct">October</option>
+                  <option value="nov">November</option>
+                  <option value="dec">December</option>
+                </select>
+
+              </div>
+              <div class="medium-2 columns">
+                <select id="selectYear"></select>
+              </div>
+              <div class="medium-7 columns">
+                <label>
+                  <button class="button" type="submit">Download</button>
+                </label>
+              </div>
+            </form>
+            <table>
+              <thead>
+                <tr>
+                  <th>id</th>
+                  <th>No. Telp</th>
+                  <th>No. Internet</th>
+                  <th>QR</th>
+                  <th>Data Lama</th>
+                  <th>Data Baru</th>
+                  <th>Status</th>
+                  <th>Keterangan</th>
+                  <th>Timestamp</th>
+                  <th>Issuer</th>
+                  <th>FollowUp</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                viewData(4);
+                ?>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <script src="js/vendor/jquery.js"></script>
-  <script src="js/vendor/foundation.js"></script>
-  <script src="js/vendor/pace.min.js"></script>
-  <script>
-    $(document).foundation();
-  </script>
-</body>
-</html>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/vendor/pace.min.js"></script>
+    <script>
+      $(document).foundation();
+      var min = 2017,
+      max = new Date().getFullYear(),
+      select = document.getElementById('selectYear');
+
+      for (var i = max; i>=min; i--){
+        var opt = document.createElement('option');
+        opt.value = i;
+        opt.innerHTML = i;
+        select.appendChild(opt);
+      }
+    </script>
+  </body>
+  </html>
 
 

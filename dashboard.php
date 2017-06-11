@@ -7,7 +7,7 @@ include('session.php');
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MO-Z | Dashboard</title>
+  <title>OMOM | Dashboard</title>
 
   <link rel="stylesheet" href="css/foundation.css">
   <link rel="stylesheet" href="css/app.css">
@@ -22,10 +22,10 @@ include('session.php');
   <div class="off-canvas-wrapper">
     <div class="large-12 bg-black">
       <div class="row small-3 small-offset-9 show-for-large">
-        <h5>Hi, <?php echo $_SESSION['login_user']; ?> | <a href="settings.php">Settings</a> | <a href="logout.php">Log out</a></h5>
+        <h5>Hi, <a href="profile.php"><?php echo $_SESSION['login_user']; ?></a> | <a href="settings.php">Settings</a> | <a href="logout.php">Log out</a></h5>
       </div>
       <div class="row small-8 small-offset-4 hide-for-large">
-        <h5>Hi, <?php echo $_SESSION['login_user']; ?> | <a href="settings.php">Settings</a> | <a href="logout.php">Log out</a></h5>
+        <h5>Hi, <a href="profile.php"><?php echo $_SESSION['login_user']; ?></a> | <a href="settings.php">Settings</a> | <a href="logout.php">Log out</a></h5>
       </div>
     </div>
     <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
@@ -36,7 +36,7 @@ include('session.php');
           <div class="row medium-8">
             <img class="thumbnail" src="image/omzet.jpg">
           </div>
-          <a href="dashboard.php"><h5 style="color:white"><center>Mo-Z Monitoring OMZET</center></h5></a>
+          <a href="dashboard.php"><h5 style="color:white"><center>OMZET Online Monitoring System</center></h5></a>
           <div class="row small-12">
             <ul class="multilevel-accordion-menu vertical menu" data-accordion-menu>
               <li>
@@ -70,12 +70,12 @@ include('session.php');
         <div class="title-bar hide-for-large">
           <div class="title-bar-left">
             <button class="menu-icon" type="button" data-open="my-info"></button>
-            <span class="title-bar-title">Mo-Z Monitoring OMZET</span>
+            <span class="title-bar-title">OMZET Online Monitoring System</span>
           </div>
         </div>
         <div class="callout primary">
           <div class="row column">
-            <h1>Welcome to Mo-Z | Monitoring OMZET</h1>            
+            <h1>Welcome to OMOM | OMZET Online Monitoring System</h1>            
           </div>
         </div>
         <div class="row medium-12">
