@@ -48,10 +48,10 @@ if(isset($_SESSION['login_user'])){
               </label>
             </div>
             <div class="medium-12 columns">
-              <label>Email
-                <input id="email" type="text" name="email" placeholder="Enter Your Email" pattern="email" required>
+              <label>Phone Number
+                <input id="phone" type="text" name="phone" placeholder="Enter Your Phone Number" pattern="number" required>
                 <span class="form-error">
-                  Please fill out a valid e-mail address!
+                  Please fill out a valid phone number!
                 </span>
               </label>
             </div>
