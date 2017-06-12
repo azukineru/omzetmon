@@ -1,6 +1,6 @@
 <?php
-include('session.php');
-include('omom.php');
+include('function/session.php');
+include('function/omom.php');
 ?>
 
 <!doctype html>
@@ -61,6 +61,12 @@ include('omom.php');
                   <li><a class="subitem" href="history.php">See Activity History</a></li>
                 </ul>
               </li>
+              <li>
+                <a href="#">Admin Management</a>
+                <ul class="menu vertical sublevel-1">
+                  <li><a class="subitem" href="admin_member.php">Member Approval</a>
+                </ul>
+              </li>
             </ul>
           </div>
         </div>
@@ -75,7 +81,7 @@ include('omom.php');
         </div>
         <div class="callout primary">
           <div class="row column">
-            <h2>Inserting Data OMZET Perangkat Aktif</h2>
+            <h2>Inserting Data OMZET DP/ODP</h2>
           </div>
         </div>
         <div class="row large-12">

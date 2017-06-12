@@ -1,5 +1,5 @@
 <?php
-include('session.php');
+include('function/session.php');
 ?>
 
 <!doctype html>
@@ -61,6 +61,12 @@ include('session.php');
                   <li><a class="subitem" href="history.php">See Activity History</a></li>
                 </ul>
               </li>
+              <li>
+                <a href="#">Admin Management</a>
+                <ul class="menu vertical sublevel-1">
+                  <li><a class="subitem" href="admin_member.php">Member Approval</a>
+                </ul>
+              </li>
             </ul>
           </div>
         </div>
@@ -119,37 +125,6 @@ include('session.php');
                 </div>
               </form>
 
-            </div>
-
-            <div class="row medium-12">
-              <h4>Admin Settings</h4>
-              <p>This is the list of all users who have tried to register to OMOM</p>
-
-              <table>
-                <thead>
-                  <th>User ID</th>
-                  <th>First Name</th>
-                  <th>Last Name</th>
-                  <th>Email</th>
-                  <th>Account Type</th>
-                  <th>Action</th>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1001</td>
-                    <td>Abdul</td>
-                    <td>Mubarok</td>
-                    <td>mubarok@telkom.co.id</td>
-                    <td>HD Daman</td>
-                    <td>
-                      <center>
-                      <button type="button" class="button">Approve</button> | <button type="button" class="alert button">Reject</button>
-                      </center>
-                    </td>
-                  </tr>
-
-                </tbody>
-              </table>
             </div>
           </div>
         </div>

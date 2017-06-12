@@ -1,6 +1,6 @@
 <?php
-include('omom.php');
-include('session.php');
+include('function/omom.php');
+include('function/session.php');
 ?>
 
 <!doctype html>
@@ -59,6 +59,12 @@ include('session.php');
                 <a href="#">Activity History</a>
                 <ul class="menu vertical sublevel-1">
                   <li><a class="subitem" href="history.php">See Activity History</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Admin Management</a>
+                <ul class="menu vertical sublevel-1">
+                  <li><a class="subitem" href="admin_member.php">Member Approval</a>
                 </ul>
               </li>
             </ul>

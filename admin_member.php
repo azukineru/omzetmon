@@ -7,7 +7,7 @@ include('function/session.php');
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OMOM | Profile</title>
+  <title>OMOM | Member Approval</title>
 
   <link rel="stylesheet" href="css/foundation.css">
   <link rel="stylesheet" href="css/app.css">
@@ -65,47 +65,65 @@ include('function/session.php');
                 <a href="#">Admin Management</a>
                 <ul class="menu vertical sublevel-1">
                   <li><a class="subitem" href="admin_member.php">Member Approval</a>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="off-canvas-content" data-off-canvas-content>
-        <div class="title-bar hide-for-large">
-          <div class="title-bar-left">
-            <button class="menu-icon" type="button" data-open="my-info"></button>
-            <span class="title-bar-title">OMZET Online Monitoring System</span>
-          </div>
-        </div>
-        <div class="callout primary">
-          <div class="row column">
-            <h1>Profile Name</h1>            
-          </div>
-        </div>
-        <div class="row medium-12">
-          <div class="inner">
-
-            <div class="row medium-6">
-              <p>Email : xxx@gmail.com</p>
-              <p>Phone Number : +62812345678</p>
-              <p>Account Type : HD Daman</p>
+                  </ul>
+                </li>
+              </ul>
             </div>
+          </div>
+        </div>
 
+        <div class="off-canvas-content" data-off-canvas-content>
+          <div class="title-bar hide-for-large">
+            <div class="title-bar-left">
+              <button class="menu-icon" type="button" data-open="my-info"></button>
+              <span class="title-bar-title">OMZET Online Monitoring System</span>
+            </div>
+          </div>
+          <div class="callout primary">
+            <div class="row column">
+              <h1>OMOM | Member Approval</h1>            
+            </div>
+          </div>
+          <div class="row medium-12">
+            <p>This is the list of all users who have tried to register to OMOM</p>
+
+            <table>
+              <thead>
+                <th>User ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Account Type</th>
+                <th>Action</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1001</td>
+                  <td>Abdul</td>
+                  <td>Mubarok</td>
+                  <td>mubarok@telkom.co.id</td>
+                  <td>HD Daman</td>
+                  <td>
+                    <center>
+                      <button type="button" class="button">Approve</button> | <button type="button" class="alert button">Reject</button>
+                    </center>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <script src="js/vendor/jquery.js"></script>
-  <script src="js/vendor/foundation.js"></script>
-  <script src="js/vendor/pace.min.js"></script>
-  <script>
-    $(document).foundation();
-  </script>
-</body>
-</html>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/vendor/pace.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+  </html>
 
 
