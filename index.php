@@ -29,7 +29,7 @@ if(isset($_SESSION['login_user'])){
       </div>
       <div class="login-form">
         <div class="inner">
-          <form action="" method="post">
+          <form action="" method="post" id="frmLogin">
             <div class="row large-12 columns">
               <label><h5>Username</h5>
                 <input type="text" name="username" placeholder="Username" value="<?php if(isset($_COOKIE["member_login"])) { echo $_COOKIE["member_login"]; } ?>" required />
@@ -37,10 +37,10 @@ if(isset($_SESSION['login_user'])){
               <label><h5>Password</h5>
                 <input type="password" name="password" placeholder="Password" value="<?php if(isset($_COOKIE["member_password"])) { echo $_COOKIE["member_password"]; } ?>" required />
               </label>
-              <input id="remember" type="checkbox" <?php if(isset($_COOKIE["member_login"])) { ?> checked <?php } ?> ><label>Remember Me</label>
+              <input id="remember" name="remember" type="checkbox" <?php if(isset($_COOKIE["member_login"])) { ?> checked <?php } ?> ><label>Remember Me</label>
               <label>Don't have account ? <a href="registration.php">Sign Up here</a></label>
               <br>
-              <button class="button" type="submit" name="login">Login</button>	  
+              <button class="button" type="submit" value="login" name="login">Login</button>	  
               <span><?php echo $error?></span>
             </div>
           </form>

@@ -22,10 +22,10 @@ include('function/omom.php');
   <div class="off-canvas-wrapper">
     <div class="large-12 bg-black">
       <div class="row small-3 small-offset-9 show-for-large">
-        <h5>Hi, <a href="profile.php"><?php echo $_SESSION['login_user']; ?></a> | <a href="settings.php">Settings</a> | <a href="logout.php">Log out</a></h5>
+        <h5>Hi, <a href="profile.php"><?php echo $_SESSION['login_user']; ?></a> | <a href="settings.php">Settings</a> | <a href="function/logout.php">Log out</a></h5>
       </div>
       <div class="row small-8 small-offset-4 hide-for-large">
-        <h5>Hi, <a href="profile.php"><?php echo $_SESSION['login_user']; ?></a> | <a href="settings.php">Settings</a> | <a href="logout.php">Log out</a></h5>
+        <h5>Hi, <a href="profile.php"><?php echo $_SESSION['login_user']; ?></a> | <a href="settings.php">Settings</a> | <a href="function/logout.php">Log out</a></h5>
       </div>
     </div>
     <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
