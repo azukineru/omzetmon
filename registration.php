@@ -74,9 +74,9 @@ if(isset($_SESSION['login_user'])){
             <div class="medium-12 columns">
               <label>Select Account Type
                 <select>
-                  <option value="hd_daman">HD Daman (Can InsertUpdate Data)</option>
-                  <option value="premium">Premium User (Can only Insert and VIew Data)</option>
-                  <option value="basic">Basic User (Can only View Data)</option>
+                  <option value="hd_daman">HD Daman (Can Insert Update and View Data)</option>
+                  <option value="premium">Premium User (Only Insert and View Data)</option>
+                  <option value="basic">Basic User (Only View Data)</option>
                 </select>
               </label>
             </div>

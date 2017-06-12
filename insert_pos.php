@@ -85,33 +85,33 @@ include('omom.php');
                 <div class="medium-6">
                   <label>Select STO
                     <select>
-                      <option value="sto1">1</option>
-                      <option value="sto2">2</option>
-                      <option value="sto3">3</option>
-                      <option value="sto4">4</option>
-                      <option value="sto5">5</option>
-                      <option value="sto6">6</option>
-                      <option value="sto7">7</option>
-                      <option value="sto8">8</option>
-                      <option value="sto9">9</option>
-                      <option value="sto10">10</option>
-                      <option value="sto11">11</option>
-                      <option value="sto12">12</option>
-                      <option value="sto13">13</option>
-                      <option value="sto14">14</option>
-                      <option value="sto15">15</option>
-                      <option value="sto16">16</option>
+                      <option value="sto1">JHR</option>
+                      <option value="sto2">GNK</option>
+                      <option value="sto3">SMT</option>
+                      <option value="sto4">BOJ</option>
+                      <option value="sto5">MJE</option>
+                      <option value="sto6">MKG</option>
+                      <option value="sto7">SSL</option>
+                      <option value="sto8">MJP</option>
+                      <option value="sto9">BMK</option>
+                      <option value="sto10">SMC</option>
+                      <option value="sto11">ABR</option>
+                      <option value="sto12">BDN</option>
+                      <option value="sto13">UNR</option>
+                      <option value="sto14">KDL</option>
+                      <option value="sto15">PUS</option>
+                      <option value="sto16">SKR</option>
                     </select>
                   </label>
                 </div>
                 <div class="medium-6">
                   <label>No. Telepon
-                    <input type="text" name="no_telp" value="<?php echo isset($_POST['no_telp']) ? $_POST['no_telp'] : '' ?>" required>
+                    <input type="text" name="no_telp" value="<?php echo isset($_POST['no_telp']) ? $_POST['no_telp'] : '' ?>" >
                   </label>
                 </div>
                 <div class="medium-6">
                   <label>No. Internet
-                    <input type="text" name="no_internet" value="<?php echo isset($_POST['no_internet']) ? $_POST['no_internet'] : '' ?>" required>
+                    <input type="text" name="no_internet" value="<?php echo isset($_POST['no_internet']) ? $_POST['no_internet'] : '' ?>" >
                   </label>
                 </div>
                 <div class="medium-6">
@@ -141,7 +141,7 @@ include('omom.php');
           
           <?php     
           if (isset($_POST["save"])) {
-           if(ctype_digit($_POST['no_telp']) && ctype_digit($_POST['no_internet'])){
+           if((isset($_POST['no_telp']) && ctype_digit($_POST['no_telp'])) || (isset($_POST['no_internet']) && ctype_digit($_POST['no_internet']))){
             insertData(2,$_POST['no_telp'],$_POST['no_internet'],$_POST['qr'],$_POST['data_lama'],$_POST['data_baru'],$_POST['keterangan'],$_SESSION['login_user']);
           }else{
             echo
