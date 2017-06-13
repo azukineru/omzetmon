@@ -5,24 +5,24 @@
 	$error='<br>';
 	
 	if(isset($_POST['login'])){
-		if(empty($_POST['username'])||empty($_POST['password'])){
-			$error="Username and Password is required to login";
+		if(empty($_POST['email'])||empty($_POST['password'])){
+			$error="Email and Password is required to login";
 		}else{
-			$username=$_POST['username'];
+			$email=$_POST['email'];
 			$password=$_POST['password'];
 			
-			$username=stripslashes($username);
+			$email=stripslashes($email);
 			$password=stripslashes($password);
-			$username=mysqli_real_escape_string($con, $username);
+			$email=mysqli_real_escape_string($con, $email);
 			$password=md5(mysqli_real_escape_string($con, $password));
 			
-			$query=mysqli_query($con, "SELECT * FROM tb_account WHERE username='$username' AND password='$password'");
+			$query=mysqli_query($con, "SELECT * FROM tb_account WHERE email='".$email."' AND password='".$password."'");
 			
 			if(mysqli_num_rows($query)==1){
-				$_SESSION['login_user']=$username;
+				$_SESSION['login_user']=$email;
 				if(!empty($_POST["remember"])){
 					echo '<script>window.alert("masuk");</script>';
-					setcookie("member_login",$_POST["username"],time()+ (10 * 365 * 24 * 60 * 60));
+					setcookie("member_login",$_POST["email"],time()+ (10 * 365 * 24 * 60 * 60));
 					setcookie("member_password",$_POST["password"],time()+ (10 * 365 * 24 * 60 * 60));
 				}
 				else{
@@ -35,7 +35,7 @@
 				}
 				header("Location:dashboard.php");
 			}else{
-				$error="Username or Password is invalid";
+				$error="Email or Password is invalid";
 			}
 			mysqli_close($con);
 		}	

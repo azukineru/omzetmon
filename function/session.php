@@ -3,12 +3,12 @@
 	
 	session_start();
 	
-	$user_check=$_SESSION['login_user'];
+	$user_email=$_SESSION['login_user'];
 	
-	$query=mysqli_query($con, "SELECT username FROM tb_account WHERE username='$user_check'");
+	$query=mysqli_query($con, "SELECT * FROM tb_account WHERE email='".$user_email."'");
 	$row=mysqli_fetch_assoc($query);
 	
-	$login_session=$row['username'];
+	$login_name=$row['fname'];
 	
 	if(!isset($_SESSION['login_user'])){
     	header("Location: index.php");

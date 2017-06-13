@@ -1,6 +1,6 @@
 <?php	
 
-	function insertData($opt, $notelp, $noint, $qr, $datalama, $databaru, $keterangan, $issuer){
+	function insertData($opt, $sto, $notelp, $noint, $qr, $datalama, $databaru, $keterangan, $issuer){
 		include('database.php');
 		
 		switch ($opt){
@@ -22,13 +22,13 @@
 			default:
 		}
 		
-		$query="INSERT INTO ".$tb." (id, no_telp, no_internet, qr, data_lama, data_baru, status, keterangan, issuer)
-				VALUES ('".$id."', '".$notelp."', '".$noint."', '".$qr."', '".$datalama."', '".$databaru."', 'NEW', '".$keterangan."', '".$issuer."')";
+		$query="INSERT INTO ".$tb." (id, sto, no_telp, no_internet, qr, data_lama, data_baru, status, keterangan, issuer)
+				VALUES ('".$id."', '".$sto."', '".$notelp."', '".$noint."', '".$qr."', '".$datalama."', '".$databaru."', 'NEW', '".$keterangan."', '".$issuer."')";
 		
 		if ($con->query($query) == TRUE) { 
 				
-			$query="INSERT INTO tb_history (id, no_telp, no_internet, qr, data_lama, data_baru, status, keterangan, issuer)
-					VALUES ('".$id."', '".$notelp."', '".$noint."', '".$qr."', '".$datalama."', '".$databaru."', 'NEW', '".$keterangan."', '".$issuer."')";
+			$query="INSERT INTO tb_history (id, sto, no_telp, no_internet, qr, data_lama, data_baru, status, keterangan, issuer)
+					VALUES ('".$id."', '".$sto."', '".$notelp."', '".$noint."', '".$qr."', '".$datalama."', '".$databaru."', 'NEW', '".$keterangan."', '".$issuer."')";
 					
 			$con->query($query);
 			
@@ -83,6 +83,7 @@
 					}
 					echo 
 					'<td>'.$row['id'].'</td>
+					 <td>'.$row['sto'].'</td>
 					 <td>'.$row['no_telp'].'</td>
 					 <td>'.$row['no_internet'].'</td>
 					 <td>'.$row['qr'].'</td>
@@ -98,6 +99,7 @@
 					echo 
 					'<tr>
 					 <td>'.$row['id'].'</td>
+					 <td>'.$row['sto'].'</td>
 					 <td>'.$row['no_telp'].'</td>
 					 <td>'.$row['no_internet'].'</td>
 					 <td>'.$row['qr'].'</td>
@@ -214,5 +216,61 @@
 				</script>';
 			}		
         }
+	}
+	
+	function signUp($email,$pass,$fname,$lname,$phone,$acctype,$sto){
+		include('database.php');
+		
+		$row=mysqli_query($con,"SELECT email FROM tb_account WHERE email='".$email."' UNION SELECT email FROM tb_unsigned WHERE email='".$email."'");
+		
+		if(mysqli_num_rows($row)==1){
+			echo
+				'<script>
+					alert("There has been and account request or registered account with your email");
+					window.location.href = "registration.php";
+				</script>';
+			 
+		}else{
+			$query="INSERT INTO tb_unsigned (email, password, fname, lname, phone, acctype, sto)
+					VALUES ('".$email."','".md5($pass)."','".$fname."','".$lname."','".$phone."','".$acctype."','".$sto."')";
+				
+			if ($con->query($query) == TRUE){
+				echo
+				'<script>
+					alert("Your request has been sent. Please wait for admin to respond");
+					window.location.href = "registration.php";
+				</script>';
+			}
+		}
+		
+	}
+	
+	function listRequest(){
+		include('database.php');
+		
+		$query=mysqli_query($con, "SELECT * FROM tb_unsigned");
+		
+		if(mysqli_num_rows($query)>0){
+			while ($row = mysqli_fetch_array($query)){
+				echo
+				'<tr>
+					<td>'.$row['email'].'</td>
+					<td>'.$row['fname'].'</td>
+					<td>'.$row['lname'].'</td>
+					<td>'.$row['phone'].'</td>
+					<td>'.$row['acctype'].'</td>
+					<td>
+						<center>
+							<button type="button" class="button">Approve</button> | <button type="button" class="alert button">Reject</button>
+						</center>
+					</td>
+				</tr>';
+			}
+		}else{
+			echo 
+			'<tr>
+			 <td colspan="10" style="text-align:center">There is no request at the moment.</td>
+			 </tr>';
+		}
 	}
 ?>
