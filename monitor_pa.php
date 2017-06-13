@@ -89,6 +89,7 @@ include('function/session.php');
             <thead>
               <tr>
                 <th>id</th>
+				<th>STO</th>
                 <th>No. Telp</th>
                 <th>No. Internet</th>
                 <th>QR</th>

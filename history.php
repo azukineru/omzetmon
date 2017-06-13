@@ -86,30 +86,30 @@ include('function/omom.php');
         </div>
         <div class="row medium-12">
           <p class="inner">Download Data Summary: 
-            <form>
+            <form target="_blank" action="function/download.php" method="post">
               <div class="medium-3 columns inner">
-                <select>
-                  <option value="jan">January</option>
-                  <option value="feb">February</option>
-                  <option value="mar">March</option>
-                  <option value="apr">April</option>
-                  <option value="may">May</option>
-                  <option value="jun">June</option>
-                  <option value="jul">July</option>
-                  <option value="aug">August</option>
-                  <option value="sep">September</option>
-                  <option value="oct">October</option>
-                  <option value="nov">November</option>
-                  <option value="dec">December</option>
+                <select name="m">
+                  <option value="01">January</option>
+                  <option value="02">February</option>
+                  <option value="03">March</option>
+                  <option value="04">April</option>
+                  <option value="05">May</option>
+                  <option value="06">June</option>
+                  <option value="07">July</option>
+                  <option value="08">August</option>
+                  <option value="09">September</option>
+                  <option value="10">October</option>
+                  <option value="11">November</option>
+                  <option value="12">December</option>
                 </select>
 
               </div>
               <div class="medium-2 columns">
-                <select id="selectYear"></select>
+                <select id="selectYear" name="y"></select>
               </div>
               <div class="medium-7 columns">
                 <label>
-                  <button class="button" type="submit">Download</button>
+                  <button class="button" type="submit" name="download">Download</button>
                 </label>
               </div>
             </form>
@@ -117,6 +117,7 @@ include('function/omom.php');
               <thead>
                 <tr>
                   <th>id</th>
+				  <th>STO</th>
                   <th>No. Telp</th>
                   <th>No. Internet</th>
                   <th>QR</th>
@@ -158,5 +159,4 @@ include('function/omom.php');
     </script>
   </body>
   </html>
-
 

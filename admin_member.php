@@ -89,26 +89,15 @@ include('function/session.php');
 
             <table>
               <thead>
-                <th>User ID</th>
+                <th>E-mail</th>
                 <th>First Name</th>
                 <th>Last Name</th>
-                <th>Email</th>
+                <th>Phone</th>
                 <th>Account Type</th>
                 <th>Action</th>
               </thead>
               <tbody>
-                <tr>
-                  <td>1001</td>
-                  <td>Abdul</td>
-                  <td>Mubarok</td>
-                  <td>mubarok@telkom.co.id</td>
-                  <td>HD Daman</td>
-                  <td>
-                    <center>
-                      <button type="button" class="button">Approve</button> | <button type="button" class="alert button">Reject</button>
-                    </center>
-                  </td>
-                </tr>
+                
 
               </tbody>
             </table>

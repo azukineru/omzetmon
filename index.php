@@ -31,8 +31,8 @@ if(isset($_SESSION['login_user'])){
         <div class="inner">
           <form action="" method="post" id="frmLogin">
             <div class="row large-12 columns">
-              <label><h5>Username</h5>
-                <input type="text" name="username" placeholder="Username" value="<?php if(isset($_COOKIE["member_login"])) { echo $_COOKIE["member_login"]; } ?>" required />
+              <label><h5>Email</h5>
+                <input type="text" name="email" placeholder="E-mail" value="<?php if(isset($_COOKIE["member_login"])) { echo $_COOKIE["member_login"]; } ?>" required />
               </label>
               <label><h5>Password</h5>
                 <input type="password" name="password" placeholder="Password" value="<?php if(isset($_COOKIE["member_password"])) { echo $_COOKIE["member_password"]; } ?>" required />

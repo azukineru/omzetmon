@@ -90,23 +90,23 @@ include('function/omom.php');
               <div class="row">
                 <div class="medium-6">
                   <label>Select STO
-                    <select>
-                      <option value="sto1">JHR</option>
-                      <option value="sto2">GNK</option>
-                      <option value="sto3">SMT</option>
-                      <option value="sto4">BOJ</option>
-                      <option value="sto5">MJE</option>
-                      <option value="sto6">MKG</option>
-                      <option value="sto7">SSL</option>
-                      <option value="sto8">MJP</option>
-                      <option value="sto9">BMK</option>
-                      <option value="sto10">SMC</option>
-                      <option value="sto11">ABR</option>
-                      <option value="sto12">BDN</option>
-                      <option value="sto13">UNR</option>
-                      <option value="sto14">KDL</option>
-                      <option value="sto15">PUS</option>
-                      <option value="sto16">SKR</option>
+                    <select name="sto">
+                      <option value="JHR">JHR</option>
+                      <option value="GNK">GNK</option>
+                      <option value="SMT">SMT</option>
+                      <option value="BOJ">BOJ</option>
+                      <option value="MJE">MJE</option>
+                      <option value="MKG">MKG</option>
+                      <option value="SSL">SSL</option>
+                      <option value="MJP">MJP</option>
+                      <option value="BMK">BMK</option>
+                      <option value="SMC">SMC</option>
+                      <option value="ABR">ABR</option>
+                      <option value="BDN">BDN</option>
+                      <option value="UNR">UNR</option>
+                      <option value="KDL">KDL</option>
+                      <option value="PUS">PUS</option>
+                      <option value="SKR">SKR</option>
                     </select>
                   </label>
                 </div>
@@ -148,7 +148,7 @@ include('function/omom.php');
           <?php     
           if (isset($_POST["save"])) {
            if((isset($_POST['no_telp']) && ctype_digit($_POST['no_telp'])) || (isset($_POST['no_internet']) && ctype_digit($_POST['no_internet']))){
-            insertData(3,$_POST['no_telp'],$_POST['no_internet'],$_POST['qr'],$_POST['data_lama'],$_POST['data_baru'],$_POST['keterangan'],$_SESSION['login_user']);
+            insertData(3,$_POST['sto'],$_POST['no_telp'],$_POST['no_internet'],$_POST['qr'],$_POST['data_lama'],$_POST['data_baru'],$_POST['keterangan'],$_SESSION['login_user']);
           }else{
             echo
             '<script>

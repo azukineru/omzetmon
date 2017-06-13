@@ -1,5 +1,6 @@
 <?php
 include('function/login.php');
+include('function/omom.php');
 
 if(isset($_SESSION['login_user'])){
   header("Location: dashboard.php");
@@ -30,12 +31,12 @@ if(isset($_SESSION['login_user'])){
       <div class="row medium-10">
         <div class="inner">
 
-          <form data-abide novalidate>
+          <form data-abide novalidate method="post">
             <div class="medium-6 columns">
               <label>First Name
                 <input id="fname" type="text" name="fname" placeholder="Enter Your First Name" required>
                 <span class="form-error">
-                  I'm required!
+                  First Name required!
                 </span>
               </label>
             </div>
@@ -43,7 +44,7 @@ if(isset($_SESSION['login_user'])){
               <label>Last Name
                 <input id="lname" type="text" name="lname" placeholder="Enter Your Last Name" required>
                 <span class="form-error">
-                  I'm required!
+                  Last Name required!
                 </span>
               </label>
             </div>
@@ -52,6 +53,14 @@ if(isset($_SESSION['login_user'])){
                 <input id="phone" type="text" name="phone" placeholder="Enter Your Phone Number" pattern="number" required>
                 <span class="form-error">
                   Please fill out a valid phone number!
+                </span>
+              </label>
+            </div>
+			<div class="medium-12 columns">
+              <label>Email
+                <input id="email" type="text" name="email" placeholder="Enter Your Email" pattern="email" required>
+                <span class="form-error">
+                  Please fill out a valid e-mail address!
                 </span>
               </label>
             </div>
@@ -67,30 +76,53 @@ if(isset($_SESSION['login_user'])){
               <label>Re-enter Password
                 <input type="password" name="repassword" placeholder="Re-enter Your Password" required pattern="alpha_numeric" data-equalto="password">
                 <span class="form-error">
-                  Hey, passwords are supposed to match!
+                  Passwords are supposed to match!
                 </span>
               </label>
             </div>
             <div class="medium-12 columns">
               <label>Select Account Type
-                <select>
-                  <option value="hd_daman">HD Daman (Can Insert, Update, and View Data)</option>
-                  <option value="premium">Premium User (Can only Insert and View Data)</option>
-                  <option value="basic">Basic User (Can only View Data)</option>
+                <select name="acctype">
+                  <option value="provisioning">Provisioning</option>
+                  <option value="assurance">Assurance</option>
+                  <option value="maintenance">Maintenance</option>
+				  <option value="deployment">Deployment</option>
+                  <option value="migration">Migration</option>
+                  <option value="daman">Daman</option>
+                </select>
+              </label>
+            </div>
+			<div class="medium-12 columns">
+              <label>Select Account Type
+                <select name="sto">
+                      <option value="JHR">JHR</option>
+                      <option value="GNK">GNK</option>
+                      <option value="SMT">SMT</option>
+                      <option value="BOJ">BOJ</option>
+                      <option value="MJE">MJE</option>
+                      <option value="MKG">MKG</option>
+                      <option value="SSL">SSL</option>
+                      <option value="MJP">MJP</option>
+                      <option value="BMK">BMK</option>
+                      <option value="SMC">SMC</option>
+                      <option value="ABR">ABR</option>
+                      <option value="BDN">BDN</option>
+                      <option value="UNR">UNR</option>
+                      <option value="KDL">KDL</option>
+                      <option value="PUS">PUS</option>
+                      <option value="SKR">SKR</option>
                 </select>
               </label>
             </div>
             <div class="medium-12 columns">
-              <input id="agreement" type="checkbox" required><label for="agreement">I have read and agree to the <a href="#">Terms and Conditions.</a></label>
-              <span class="form-error">
-                  Please check this box!
-                </span>
-            </div>
-            <div class="medium-12 columns">
-              <button class="button" type="submit" value="Submit">Submit</button>
+              <button class="button" type="submit" value="Submit" name="submit">Submit</button>
             </div>
           </form>
-
+		<?php
+			if(isset($_POST['submit'])){
+				signUp($_POST['email'],$_POST['password'],$_POST['fname'],$_POST['lname'],$_POST['phone'],$_POST['acctype'],$_POST['sto']);
+			}
+		?>
         </div>
       </div>
     </div>
