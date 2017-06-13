@@ -3,6 +3,7 @@
 	background-size: 100%;
 	background-position: bottom left;
 	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 
 .side-full-height{
