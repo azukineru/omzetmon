@@ -22,10 +22,10 @@ include('function/session.php');
   <div class="off-canvas-wrapper">
     <div class="large-12 bg-black">
       <div class="row small-3 small-offset-9 show-for-large">
-        <h5>Hi, <a href="profile.php"><?php echo $_SESSION['login_user']; ?></a> | <a href="settings.php">Settings</a> | <a href="function/logout.php">Log out</a></h5>
+        <h5>Hi, <a href="profile.php"><?php echo $login_fname; ?></a> | <a href="settings.php">Settings</a> | <a href="function/logout.php">Log out</a></h5>
       </div>
       <div class="row small-12 hide-for-large">
-        <h5>Hi, <a href="profile.php"><?php echo $_SESSION['login_user']; ?></a> | <a href="settings.php">Settings</a> | <a href="function/logout.php">Log out</a></h5>
+        <h5>Hi, <a href="profile.php"><?php echo $login_fname; ?></a> | <a href="settings.php">Settings</a> | <a href="function/logout.php">Log out</a></h5>
       </div>
     </div>
     <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
@@ -89,7 +89,7 @@ include('function/session.php');
             <div class="row medium-6">
               <h4>General Settings</h4>
 
-              <form data-abide novalidate>
+              <form data-abide novalidate method="post">
                 <div class="medium-6 columns">
                   First Name: <input id="fname" type="text" name="fname" placeholder="" required>
                   <span class="form-error">
@@ -97,13 +97,13 @@ include('function/session.php');
                   </span>
                 </div>
                 <div class="medium-6 columns">
-                  Last Name: <input id="lname" type="text" name="fname" placeholder="" required>
+                  Last Name: <input id="lname" type="text" name="lname" placeholder="" required>
                   <span class="form-error">
                     I'm required!
                   </span>
                 </div>
                 <div class="medium-12 columns">
-                  Password: <input id="password" type="password" name="fname" placeholder="" pattern=".{6,}" required>
+                  Password: <input id="password" type="password" name="password" placeholder="" pattern=".{6,}" required>
                   <span class="form-error">
                     Please enter at least 6 characters as your password!
                   </span>
@@ -111,20 +111,24 @@ include('function/session.php');
                 <div class="medium-12 columns">
                   Re-enter Password: <input type="password" name="repassword" placeholder="" required pattern="alpha_numeric" data-equalto="password">
                   <span class="form-error">
-                    Hey, passwords are supposed to match!
+                    Passwords are supposed to match!
                   </span>
                 </div>
                 <div class="medium-12 columns">
-                  Phone Number: <input id="phone" type="text" name="fname" placeholder="" pattern="number">
+                  Phone Number: <input id="phone" type="text" name="phone" placeholder="" pattern="number">
                   <span class="form-error">
-                    Enter number only!
+                    Please fill out a valid phone number!
                   </span>
                 </div>
                 <div class="medium-12 columns">
-                  <button class="button" type="submit" value="Submit">Save</button>
+                  <button class="button" type="submit" value="Submit" name='save'>Save</button>
                 </div>
               </form>
-
+				<?php
+					if(isset($_POST['save'])){
+						updateAcc($login_email,$_POST['password'],$_POST['fname'],$_POST['lname'],$_POST['phone']);
+					}
+				?>						   																			 
             </div>
           </div>
         </div>

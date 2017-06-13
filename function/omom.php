@@ -45,7 +45,7 @@
 		}
 	}
 	
-	function viewData($opt){
+	function viewData($opt,$acctype){
 		include('database.php');
 		
 		switch ($opt){
@@ -75,7 +75,7 @@
 			while ($row = mysqli_fetch_array($query)){
 				if($opt==4){
 					if($row['status']=="CLOSED"){
-						echo '<tr style="background-color:#80ff80">';
+						echo '<tr style="background-color:#daf6ff">';
 					}elseif($row['status']=="REJECTED"){
 						echo '<tr style="background-color:#ff9999">';
 					}else{
@@ -108,9 +108,17 @@
 					 <td>'.$row['status'].'</td>
 					 <td>'.$row['keterangan'].'</td>
 					 <td>'.$row['tanggal'].'</td>
-					 <td>'.$row['issuer'].'</td>
-					 <td><a href="update.php?id='.$row['id'].'">Update</a></td>
-					 </tr>';
+					 <td>'.$row['issuer'].'</td>';
+					 
+					 if($acctype=='admin' || $acctype=='daman'){
+						 echo
+						'<td><a href="update.php?id='.$row['id'].'">Update</a></td>
+						</tr>';
+					 }else{
+						 echo
+						 '<td style="text-align:center">-</td>
+						 </tr>';
+					 }
 				}  
 			}
 		}else{
@@ -242,7 +250,23 @@
 				</script>';
 			}
 		}
+	}
+	
+	function updateAcc($email,$pass,$fname,$lname,$phone){
+		include('database.php');
+		$row=mysqli_query($con,"SELECT * FROM tb_account WHERE email='".$email."'");
 		
+		if(mysqli_num_rows($row)==1){
+			$query="UPDATE tb_account SET password='".md5($password)."', fname='".$fname."', lname='".$lname."', phone='".$phone."'
+					WHERE email='".$email."'";	
+			$con->query($query);
+			echo
+				'<script>
+					alert("Your data has been updated");
+					window.location.href = "settings.php";
+				</script>';
+			 
+		}
 	}
 	
 	function listRequest(){
@@ -259,9 +283,11 @@
 					<td>'.$row['lname'].'</td>
 					<td>'.$row['phone'].'</td>
 					<td>'.$row['acctype'].'</td>
+					<td>'.$row['sto'].'</td>		 
 					<td>
 						<center>
-							<button type="button" class="button">Approve</button> | <button type="button" class="alert button">Reject</button>
+							<a class="button" href="function/adminopt.php?approveAcc=1&email='.$row['email'].'" >Approve</a> | 
+							<a class="alert button" href="function/adminopt.php?email='.$row['email'].'">Reject</a>														  
 						</center>
 					</td>
 				</tr>';

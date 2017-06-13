@@ -51,6 +51,12 @@
 	color: white;
 }
 
+/* HELP IMAGE */
+.help-img img{
+	max-width: 700px;
+	max-height: 400px;
+}
+
 /* SCROLLBAR */
 ::-webkit-scrollbar {
     width: 12px;

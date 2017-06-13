@@ -93,7 +93,7 @@ if(isset($_SESSION['login_user'])){
               </label>
             </div>
 			<div class="medium-12 columns">
-              <label>Select Account Type
+              <label>Select STO
                 <select name="sto">
                       <option value="JHR">JHR</option>
                       <option value="GNK">GNK</option>
