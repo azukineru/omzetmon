@@ -1,5 +1,9 @@
 <?php
 include('function/session.php');
+if(isset($_GET['vemail'])){
+	$query=mysqli_query($con, "SELECT * FROM tb_account WHERE email='".$_GET['vemail']."'");
+	$row=mysqli_fetch_assoc($query);
+}
 ?>
 
 <!doctype html>
@@ -7,7 +11,7 @@ include('function/session.php');
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OMOM | Profile</title>
+  <title>OM-OM | Profile</title>
 
   <link rel="stylesheet" href="css/foundation.css">
   <link rel="stylesheet" href="css/app.css">

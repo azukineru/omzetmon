@@ -7,7 +7,7 @@ include('function/session.php');
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OMOM | Dashboard</title>
+  <title>OM-OM | Dashboard</title>
 
   <link rel="stylesheet" href="css/foundation.css">
   <link rel="stylesheet" href="css/app.css">
@@ -87,7 +87,7 @@ include('function/session.php');
     </div>
     <div class="callout primary">
       <div class="row column">
-        <h1>Welcome to OMOM | OMZET Online Monitoring System</h1>            
+        <h1>Welcome to OM-OM | OMZET Online Monitoring System</h1>            
       </div>
     </div>
     <div class="row medium-12">

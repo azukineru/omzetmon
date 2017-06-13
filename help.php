@@ -7,7 +7,7 @@ include('function/session.php');
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OMOM | Dashboard</title>
+  <title>OM-OM | Dashboard</title>
 
   <link rel="stylesheet" href="css/foundation.css">
   <link rel="stylesheet" href="css/app.css">
@@ -82,7 +82,7 @@ include('function/session.php');
           </div>
           <div class="callout primary">
             <div class="row column">
-              <h1>OMOM | Site Help</h1>            
+              <h1>OM-OM | Site Help</h1>            
             </div>
           </div>
           <div class="row medium-12">
@@ -107,7 +107,7 @@ include('function/session.php');
                     <li>Inserting Data OMZET</li>
                      By Clicking Inserting Data menu on the sidebar, you will see three submenus below it. These submenus is used to insert any kind of OMZET data to the system.<br>
                     <img class="thumbnail" src="image/help/3-3.jpg"><br>
-                    After you have clicked one of those submenus, you will be able to see a form. Fill out those form based on the data that you received from field technician. After you are done, click Save button to submit those data to the system.<br>
+                    After you have clicked one of those submenus, you will be able to see a form. Fill out those form based on the data that you received from field technician. After you are done, click 'Submit' button to submit those data to the system.<br>
                     <img class="thumbnail" src="image/help/3-4.jpg">
 
                     <li>Viewing Activity History</li>

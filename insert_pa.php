@@ -8,7 +8,7 @@ include('function/omom.php');
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OMOM | Inserting Data OMZET Perangkat Aktif</title>
+  <title>OM-OM | Inserting Data OMZET Perangkat Aktif</title>
 
   <link rel="stylesheet" href="css/foundation.css">
   <link rel="stylesheet" href="css/app.css">
@@ -146,7 +146,7 @@ include('function/omom.php');
                     <input type="text" name="keterangan" value="<?php echo isset($_POST['keterangan']) ? $_POST['keterangan'] : '' ?>">
                   </label>
                 </div>
-                <button type="submit" class="button large" name="save">Save</button>
+                <button type="submit" class="button large" name="save">Submit</button>
               </div>            
             </form>
           </div>
@@ -154,7 +154,7 @@ include('function/omom.php');
           <?php     
           if (isset($_POST["save"])) {
            if((isset($_POST['no_telp']) && ctype_digit($_POST['no_telp'])) || (isset($_POST['no_internet']) && ctype_digit($_POST['no_internet']))){
-            insertData(1,$_POST['sto'],$_POST['no_telp'],$_POST['no_internet'],$_POST['qr'],$_POST['data_lama'],$_POST['data_baru'],$_POST['keterangan'],$_SESSION['login_user']);
+            insertData(1,$_POST['sto'],$_POST['no_telp'],$_POST['no_internet'],$_POST['qr'],$_POST['data_lama'],$_POST['data_baru'],$_POST['keterangan'],$login_email);
           }else{
             echo
             '<script>

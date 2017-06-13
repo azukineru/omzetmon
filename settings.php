@@ -8,7 +8,7 @@ include('function/omom.php');
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OMOM | Settings</title>
+  <title>OM-OM | Settings</title>
 
   <link rel="stylesheet" href="css/foundation.css">
   <link rel="stylesheet" href="css/app.css">
@@ -88,7 +88,7 @@ include('function/omom.php');
         </div>
         <div class="callout primary">
           <div class="row column">
-            <h1>OMOM |  Settings</h1>            
+            <h1>OM-OM |  Settings</h1>            
           </div>
         </div>
         <div class="row medium-12">

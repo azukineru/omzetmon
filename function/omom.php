@@ -81,6 +81,11 @@
 					}else{
 						echo '<tr>';
 					}
+					$isquery=mysqli_query($con, "SELECT fname FROM tb_account WHERE email='".$row['issuer']."'");
+					$isrow=mysqli_fetch_assoc($isquery);
+					
+					$fuquery=mysqli_query($con, "SELECT fname FROM tb_account WHERE email='".$row['followup']."'");
+					$furow=mysqli_fetch_assoc($fuquery);																			  
 					echo 
 					'<td>'.$row['id'].'</td>
 					 <td>'.$row['sto'].'</td>
@@ -92,8 +97,8 @@
 					 <td>'.$row['status'].'</td>
 					 <td>'.$row['keterangan'].'</td>
 					 <td>'.$row['tanggal'].'</td>
-					 <td>'.$row['issuer'].'</td>
-					 <td>'.$row['followup'].'</td>
+					 <td><a href="profile.php?vemail='.$row['issuer'].'">'.$isrow['fname'].'</a></td>
+					 <td><a href="profile.php?vemail='.$row['followup'].'">'.$furow['fname'].'</a></td>
 					 </tr>';
 				}else{
 					echo 
@@ -108,7 +113,7 @@
 					 <td>'.$row['status'].'</td>
 					 <td>'.$row['keterangan'].'</td>
 					 <td>'.$row['tanggal'].'</td>
-					 <td>'.$row['issuer'].'</td>';
+					 <td><a href="profile.php?vemail='.$row['issuer'].'">'.$isrow['fname'].'</a></td>';
 					 
 					 if($acctype=='admin' || $acctype=='daman'){
 						 echo

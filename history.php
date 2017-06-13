@@ -8,7 +8,7 @@ include('function/omom.php');
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OMOM | OMZET Activity History</title>
+  <title>OM-OM | OMZET Activity History</title>
 
   <link rel="stylesheet" href="css/foundation.css">
   <link rel="stylesheet" href="css/app.css">

@@ -8,7 +8,7 @@ include('function/omom.php');
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OMOM | Update Data OMZET</title>
+  <title>OM-OM | Update Data OMZET</title>
 
   <link rel="stylesheet" href="css/foundation.css">
   <link rel="stylesheet" href="css/app.css">
@@ -93,7 +93,7 @@ include('function/omom.php');
         <div class="row large-12">
           <div class="inner">
            <?php  
-           updateData($_GET['id'],$_SESSION['login_user']);
+           updateData($_GET['id'],$login_email);
            ?> 
          </div>
        </div>

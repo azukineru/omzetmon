@@ -12,7 +12,7 @@ if(isset($_SESSION['login_user'])){
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OMOM | Registration</title>
+  <title>OM-OM | Registration</title>
   <link rel="stylesheet" href="css/foundation.css" />
   <link rel="stylesheet" href="css/app.css" />
   <link rel="stylesheet" href="css/custom.css" />
@@ -56,7 +56,7 @@ if(isset($_SESSION['login_user'])){
                 </span>
               </label>
             </div>
-			<div class="medium-12 columns">
+            <div class="medium-12 columns">
               <label>Email
                 <input id="email" type="text" name="email" placeholder="Enter Your Email" pattern="email" required>
                 <span class="form-error">
@@ -82,47 +82,55 @@ if(isset($_SESSION['login_user'])){
             </div>
             <div class="medium-12 columns">
               <label>Select Account Type
-                <select name="acctype">
+                <select name="acctype" id="ddl1" onchange="configureDropDownLists(this,document.getElementById('ddl2'))">
                   <option value="provisioning">Provisioning</option>
                   <option value="assurance">Assurance</option>
                   <option value="maintenance">Maintenance</option>
-				  <option value="deployment">Deployment</option>
+                  <option value="deployment">Deployment</option>
                   <option value="migration">Migration</option>
                   <option value="daman">Daman</option>
                 </select>
               </label>
             </div>
-			<div class="medium-12 columns">
+            <div class="medium-12 columns">
               <label>Select STO
-                <select name="sto">
-                      <option value="JHR">JHR</option>
-                      <option value="GNK">GNK</option>
-                      <option value="SMT">SMT</option>
-                      <option value="BOJ">BOJ</option>
-                      <option value="MJE">MJE</option>
-                      <option value="MKG">MKG</option>
-                      <option value="SSL">SSL</option>
-                      <option value="MJP">MJP</option>
-                      <option value="BMK">BMK</option>
-                      <option value="SMC">SMC</option>
-                      <option value="ABR">ABR</option>
-                      <option value="BDN">BDN</option>
-                      <option value="UNR">UNR</option>
-                      <option value="KDL">KDL</option>
-                      <option value="PUS">PUS</option>
-                      <option value="SKR">SKR</option>
+                <select name="sto" id="ddl2">
+                  <option value="JHR">JHR</option>
+                  <option value="GNK">GNK</option>
+                  <option value="SMT">SMT</option>
+                  <option value="BOJ">BOJ</option>
+                  <option value="MJE">MJE</option>
+                  <option value="MKG">MKG</option>
+                  <option value="SSL">SSL</option>
+                  <option value="MJP">MJP</option>
+                  <option value="BMK">BMK</option>
+                  <option value="SMC">SMC</option>
+                  <option value="ABR">ABR</option>
+                  <option value="BDN">BDN</option>
+                  <option value="UNR">UNR</option>
+                  <option value="KDL">KDL</option>
+                  <option value="PUS">PUS</option>
+                  <option value="SKR">SKR</option>
                 </select>
+              </label>
+            </div>
+            <div class="medium-12 columns">
+              <label for="agreement">
+                <input id="agreement" type="checkbox" required>I hereby declare that the information submitted here are valid and I take full responsibility for that.
+                <span class="form-error">
+                  Please check this box!
+                </span>
               </label>
             </div>
             <div class="medium-12 columns">
               <button class="button" type="submit" value="Submit" name="submit">Submit</button>
             </div>
           </form>
-		<?php
-			if(isset($_POST['submit'])){
-				signUp($_POST['email'],$_POST['password'],$_POST['fname'],$_POST['lname'],$_POST['phone'],$_POST['acctype'],$_POST['sto']);
-			}
-		?>
+          <?php
+          if(isset($_POST['submit'])){
+            signUp($_POST['email'],$_POST['password'],$_POST['fname'],$_POST['lname'],$_POST['phone'],$_POST['acctype'],$_POST['sto']);
+          }
+          ?>
         </div>
       </div>
     </div>
@@ -135,6 +143,7 @@ if(isset($_SESSION['login_user'])){
   <script src="js/vendor/foundation.js"></script>
   <script src="js/vendor/foundation.abide.js"></script>
   <script src="js/vendor/pace.min.js"></script>
+  <script src="js/ddl.js"></script>
   <script>
     $(document).foundation();
   </script>
