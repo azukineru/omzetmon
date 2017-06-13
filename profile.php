@@ -34,8 +34,9 @@ include('function/session.php');
         <div class="medium-12">
           <br>
           <div class="row medium-8">
-            <img class="thumbnail" src="image/omzet.jpg">
+            <img style="margin-top: 50px;" src="image/omom.png">
           </div>
+          <br>
           <a href="dashboard.php"><h5 style="color:white"><center>OMZET Online Monitoring System</center></h5></a>
           <div class="row small-12">
             <ul class="multilevel-accordion-menu vertical menu" data-accordion-menu>
@@ -61,57 +62,62 @@ include('function/session.php');
                   <li><a class="subitem" href="history.php">See Activity History</a></li>
                 </ul>
               </li>
-              <li>
-                <a href="#">Admin Management</a>
-                <ul class="menu vertical sublevel-1">
-                  <li><a class="subitem" href="admin_member.php">Member Approval</a>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="off-canvas-content" data-off-canvas-content>
-          <div class="title-bar hide-for-large">
-            <div class="title-bar-left">
-              <button class="menu-icon" type="button" data-open="my-info"></button>
-              <span class="title-bar-title">OMZET Online Monitoring System</span>
-            </div>
-          </div>
-          <div class="callout primary">
-            <div class="row column">
-              <h1><?php echo $row['fname'].' '.$row['lname'];?></h1>            
-            </div>
-          </div>
-          <div class="row medium-12">
-            <div class="inner">
-
-              <div class="row medium-6">
-                <p>Email : <?php echo $row['email'];?></p>
-                <p>Phone Number : <?php echo $row['phone'];?></p>
-                <p>Account Type : <?php echo $row['acctype'];?></p>
-                
-                <?php
-                if($row['acctype']=='admin'){
-                }else{
-                 echo '<p>STO : '.$row['sto'].'</p>';
-               }
-               ?>
-             </div>
-
-           </div>
-         </div>
+              <?php
+              if($login_acctype=='admin'){
+               echo
+               '<li>
+               <a href="#">Admin Management</a>
+               <ul class="menu vertical sublevel-1">
+                 <li><a class="subitem" href="admin_member.php">Member Approval</a></li>
+               </ul>
+             </li>';
+           }
+           ?>
+         </ul>
        </div>
      </div>
    </div>
 
-   <script src="js/vendor/jquery.js"></script>
-   <script src="js/vendor/foundation.js"></script>
-   <script src="js/vendor/pace.min.js"></script>
-   <script>
-    $(document).foundation();
-  </script>
+   <div class="off-canvas-content" data-off-canvas-content>
+    <div class="title-bar hide-for-large">
+      <div class="title-bar-left">
+        <button class="menu-icon" type="button" data-open="my-info"></button>
+        <span class="title-bar-title">OMZET Online Monitoring System</span>
+      </div>
+    </div>
+    <div class="callout primary">
+      <div class="row column">
+        <h1><?php echo $row['fname'].' '.$row['lname'];?></h1>            
+      </div>
+    </div>
+    <div class="row medium-12">
+      <div class="inner">
+
+        <div class="row medium-6">
+          <p>Email : <?php echo $row['email'];?></p>
+          <p>Phone Number : <?php echo $row['phone'];?></p>
+          <p>Account Type : <?php echo $row['acctype'];?></p>
+          
+          <?php
+          if($row['acctype']=='admin'){
+          }else{
+           echo '<p>STO : '.$row['sto'].'</p>';
+         }
+         ?>
+       </div>
+
+     </div>
+   </div>
+ </div>
+</div>
+</div>
+
+<script src="js/vendor/jquery.js"></script>
+<script src="js/vendor/foundation.js"></script>
+<script src="js/vendor/pace.min.js"></script>
+<script>
+  $(document).foundation();
+</script>
 </body>
 </html>
 

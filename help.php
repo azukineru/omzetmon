@@ -34,8 +34,9 @@ include('function/session.php');
         <div class="medium-12">
           <br>
           <div class="row medium-8">
-            <img class="thumbnail" src="image/omzet.jpg">
+            <img style="margin-top: 50px;" src="image/omom.png">
           </div>
+          <br>
           <a href="dashboard.php"><h5 style="color:white"><center>OMZET Online Monitoring System</center></h5></a>
           <div class="row small-12">
             <ul class="multilevel-accordion-menu vertical menu" data-accordion-menu>
@@ -64,7 +65,7 @@ include('function/session.php');
               <li>
                 <a href="#">Admin Management</a>
                 <ul class="menu vertical sublevel-1">
-                  <li><a class="subitem" href="admin_member.php">Member Approval</a>
+                  <li><a class="subitem" href="admin_member.php">Member Approval</a></li>
                   </ul>
                 </li>
               </ul>

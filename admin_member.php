@@ -35,8 +35,9 @@ include('function/omom.php');
         <div class="medium-12">
           <br>
           <div class="row medium-8">
-            <img class="thumbnail" src="image/omzet.jpg">
+            <img style="margin-top: 50px;" src="image/omom.png">
           </div>
+          <br>
           <a href="dashboard.php"><h5 style="color:white"><center>OMZET Online Monitoring System</center></h5></a>
           <div class="row small-12">
             <ul class="multilevel-accordion-menu vertical menu" data-accordion-menu>
@@ -65,59 +66,59 @@ include('function/omom.php');
               <li>
                 <a href="#">Admin Management</a>
                 <ul class="menu vertical sublevel-1">
-                  <li><a class="subitem" href="admin_member.php">Member Approval</a>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="off-canvas-content" data-off-canvas-content>
-          <div class="title-bar hide-for-large">
-            <div class="title-bar-left">
-              <button class="menu-icon" type="button" data-open="my-info"></button>
-              <span class="title-bar-title">OMZET Online Monitoring System</span>
-            </div>
-          </div>
-          <div class="callout primary">
-            <div class="row column">
-              <h1>OMOM | Member Approval</h1>            
-            </div>
-          </div>
-          <div class="row medium-12">
-            <p>This is the list of all users who have tried to register to OMOM</p>
-
-            <table>
-              <thead>
-                <th>E-mail</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Phone</th>
-                <th>Account Type</th>
-                <th>STO</th>
-                <th>Action</th>
-              </thead>
-              <tbody>
-               
-                <?php
-                listRequest();
-                ?>
-
-              </tbody>
-            </table>
+                  <li><a class="subitem" href="admin_member.php">Member Approval</a></li></li>
+                </ul>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-    </div>
 
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/vendor/foundation.js"></script>
-    <script src="js/vendor/pace.min.js"></script>
-    <script>
-      $(document).foundation();
-    </script>
-  </body>
-  </html>
+      <div class="off-canvas-content" data-off-canvas-content>
+        <div class="title-bar hide-for-large">
+          <div class="title-bar-left">
+            <button class="menu-icon" type="button" data-open="my-info"></button>
+            <span class="title-bar-title">OMZET Online Monitoring System</span>
+          </div>
+        </div>
+        <div class="callout primary">
+          <div class="row column">
+            <h1>OMOM | Member Approval</h1>            
+          </div>
+        </div>
+        <div class="row medium-12">
+          <p>This is the list of all users who have tried to register to OMOM</p>
+
+          <table>
+            <thead>
+              <th>E-mail</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Phone</th>
+              <th>Account Type</th>
+              <th>STO</th>
+              <th>Action</th>
+            </thead>
+            <tbody>
+             
+              <?php
+              listRequest();
+              ?>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/vendor/foundation.js"></script>
+  <script src="js/vendor/pace.min.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
+</body>
+</html>
 
 
