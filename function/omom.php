@@ -101,6 +101,10 @@
 					 <td><a href="profile.php?vemail='.$row['followup'].'">'.$furow['fname'].'</a></td>
 					 </tr>';
 				}else{
+					
+					$isquery=mysqli_query($con, "SELECT fname FROM tb_account WHERE email='".$row['issuer']."'");
+					$isrow=mysqli_fetch_assoc($isquery);
+					
 					echo 
 					'<tr>
 					 <td>'.$row['id'].'</td>
