@@ -1,5 +1,6 @@
 <?php
 include('function/session.php');
+include('function/omom.php');
 ?>
 
 <!doctype html>
@@ -97,13 +98,13 @@ include('function/session.php');
 
               <form data-abide novalidate method="post">
                 <div class="medium-6 columns">
-                  First Name: <input id="fname" type="text" name="fname" placeholder="" required>
+                  First Name: <input id="fname" type="text" name="fname" value="<?php echo $login_fname; ?>" required>
                   <span class="form-error">
                     I'm required!
                   </span>
                 </div>
                 <div class="medium-6 columns">
-                  Last Name: <input id="lname" type="text" name="lname" placeholder="" required>
+                  Last Name: <input id="lname" type="text" name="lname" value="<?php echo $login_lname; ?>" required>
                   <span class="form-error">
                     I'm required!
                   </span>
@@ -121,7 +122,7 @@ include('function/session.php');
                   </span>
                 </div>
                 <div class="medium-12 columns">
-                  Phone Number: <input id="phone" type="text" name="phone" placeholder="" pattern="number">
+                  Phone Number: <input id="phone" type="text" name="phone" value="<?php echo $login_phone; ?>" pattern="number">
                   <span class="form-error">
                     Please fill out a valid phone number!
                   </span>

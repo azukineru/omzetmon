@@ -92,7 +92,7 @@ include('function/session.php');
     </div>
     <div class="row medium-12">
       <div class="inner">
-        <h3>Our Validation Status right now :</h3>
+        <h3>Our Status right now :</h3>
         <div class="column medium-3">
           <div class="card-flex-article card">
             <div class="card-image">
