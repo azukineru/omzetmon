@@ -11,18 +11,18 @@
 		
 	echo '<table border="1">';
 	echo '<tr>';
-	echo '<td>id</td>'; 
-	echo '<td>sto</td>'; 
-	echo '<td>no_telp</td>'; 
-	echo '<td>no_internet</td>'; 
-	echo '<td>qr</td>'; 
-	echo '<td>data_lama</td>'; 
-	echo '<td>data_baru</td>'; 
-	echo '<td>status</td>'; 
-	echo '<td>keterangan</td>'; 
-	echo '<td>tanggal</td>'; 
-	echo '<td>issuer</td>'; 
-	echo '<td>followup</td>'; 
+	echo '<td>ID</td>'; 
+	echo '<td>STO</td>'; 
+	echo '<td>No Telp</td>'; 
+	echo '<td>No Internet</td>'; 
+	echo '<td>QR Code</td>'; 
+	echo '<td>Data Lama</td>'; 
+	echo '<td>Data Baru</td>'; 
+	echo '<td>Status</td>'; 
+	echo '<td>Keterangan</td>'; 
+	echo '<td>Tanggal</td>'; 
+	echo '<td>Issuer</td>'; 
+	echo '<td>Followup</td>'; 
 	echo '</tr>';
 	while ($row = mysqli_fetch_array($query)){ 
 		echo '<tr>';
