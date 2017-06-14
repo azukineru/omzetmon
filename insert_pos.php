@@ -22,10 +22,10 @@ include('function/omom.php');
   <div class="off-canvas-wrapper">
     <div class="large-12 bg-black">
       <div class="row small-3 small-offset-9 show-for-large">
-        <h5>Hi, <a href="profile.php"><?php echo $login_fname; ?></a> | <a href="settings.php">Settings</a> | <a href="function/logout.php">Log out</a></h5>
+        <h5>Hi, <a href="profile.php"><?php echo $login_fname; ?></a> | <a href="help.php">Help</a> | <a href="settings.php">Settings</a> | <a href="function/logout.php">Log out</a></h5>
       </div>
       <div class="row small-12 hide-for-large">
-        <h5>Hi, <a href="profile.php"><?php echo $login_fname; ?></a> | <a href="settings.php">Settings</a> | <a href="function/logout.php">Log out</a></h5>
+        <h5>Hi, <a href="profile.php"><?php echo $login_fname; ?></a> | <a href="help.php">Help</a> | <a href="settings.php">Settings</a> | <a href="function/logout.php">Log out</a></h5>
       </div>
     </div>
     <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
@@ -154,7 +154,7 @@ include('function/omom.php');
           <?php     
           if (isset($_POST["save"])) {
            if((isset($_POST['no_telp']) && ctype_digit($_POST['no_telp'])) || (isset($_POST['no_internet']) && ctype_digit($_POST['no_internet']))){
-            insertData(2,$_POST['sto'],$_POST['no_telp'],$_POST['no_internet'],$_POST['qr'],$_POST['data_lama'],$_POST['data_baru'],$_POST['keterangan'],$login_email]);
+            insertData(2,$_POST['sto'],$_POST['no_telp'],$_POST['no_internet'],$_POST['qr'],$_POST['data_lama'],$_POST['data_baru'],$_POST['keterangan'],$login_email);
           }else{
             echo
             '<script>
