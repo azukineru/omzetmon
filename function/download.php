@@ -22,7 +22,7 @@
 	echo '<td>Keterangan</td>'; 
 	echo '<td>Tanggal</td>'; 
 	echo '<td>Issuer</td>'; 
-	echo '<td>Followup</td>'; 
+	echo '<td>FollowUp</td>'; 
 	echo '</tr>';
 	while ($row = mysqli_fetch_array($query)){ 
 		echo '<tr>';
