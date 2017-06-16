@@ -12,7 +12,7 @@ if(isset($_SESSION['login_user'])){
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OMOM | Registration</title>
+  <title>OMOM | Registrasi</title>
   <link rel="stylesheet" href="css/foundation.css" />
   <link rel="stylesheet" href="css/app.css" />
   <link rel="stylesheet" href="css/custom.css" />
@@ -25,7 +25,7 @@ if(isset($_SESSION['login_user'])){
     <div class="column large-6 side-full-height">
       <div class="row medium-12">
         <a href="index.php"><h4><i class="fi-arrow-left"></i>&nbspBack</h4></a>
-        <center><h2>Registration</h2></center>
+        <center><h2>Registrasi</h2></center>
       </div>
       <br>
       <div class="row medium-10">
@@ -33,26 +33,26 @@ if(isset($_SESSION['login_user'])){
 
           <form data-abide novalidate method="post">
             <div class="medium-6 columns">
-              <label>First Name
+              <label>Nama Awal
                 <input id="fname" type="text" name="fname" placeholder="Enter Your First Name" required>
                 <span class="form-error">
-                  First Name required!
+                  Nama Awal harus dimasukkan!
                 </span>
               </label>
             </div>
             <div class="medium-6 columns">
-              <label>Last Name
+              <label>Nama Akhir
                 <input id="lname" type="text" name="lname" placeholder="Enter Your Last Name" required>
                 <span class="form-error">
-                  Last Name required!
+                  Nama Akhir harus dimasukkan!
                 </span>
               </label>
             </div>
             <div class="medium-12 columns">
-              <label>Phone Number
+              <label>Nomor Telepon
                 <input id="phone" type="text" name="phone" placeholder="Enter Your Phone Number" pattern="number" required>
                 <span class="form-error">
-                  Please fill out a valid phone number!
+                  Tolong masukkan nomor telepon yang valid!
                 </span>
               </label>
             </div>
@@ -60,7 +60,7 @@ if(isset($_SESSION['login_user'])){
               <label>Email
                 <input id="email" type="text" name="email" placeholder="Enter Your Email" pattern="email" required>
                 <span class="form-error">
-                  Please fill out a valid e-mail address!
+                  Tolong masukkan email yang valid!
                 </span>
               </label>
             </div>
@@ -68,20 +68,20 @@ if(isset($_SESSION['login_user'])){
               <label>Password
                 <input id="password" type="password" name="password" placeholder="Enter Your Password" pattern=".{6,}" required>
                 <span class="form-error">
-                  Please enter at least 6 characters as your password!
+                  Tolong masukkan password minimal 6 karakter!
                 </span>
               </label>
             </div>
             <div class="medium-12 columns">
-              <label>Re-enter Password
+              <label>Ulangi Password
                 <input type="password" name="repassword" placeholder="Re-enter Your Password" required pattern="alpha_numeric" data-equalto="password">
                 <span class="form-error">
-                  Passwords are supposed to match!
+                  Password harus sama!
                 </span>
               </label>
             </div>
             <div class="medium-12 columns">
-              <label>Select Account Type
+              <label>Pilih Tipe Akun
                 <select name="acctype" id="ddl1" onchange="configureDropDownLists(this,document.getElementById('ddl2'))">
                   <option value="provisioning">Provisioning</option>
                   <option value="assurance">Assurance</option>
@@ -117,14 +117,14 @@ if(isset($_SESSION['login_user'])){
             </div>
 			<div class="medium-12 columns">
               <label for="agreement">
-                <input id="agreement" type="checkbox" required>I hereby declare that the information submitted here are valid and I take full responsibility for that.
+                <input id="agreement" type="checkbox" required>Saya mengkonfirmasi bahwa data yang saya isikan telah tepat dan saya bertanggungjawab penuh untuk itu.
                 <span class="form-error">
-                  Please check this box!
+                  Centang kotak ini!
                 </span>
               </label>
             </div>
             <div class="medium-12 columns">
-              <button class="button" type="submit" value="Submit" name="submit">Submit</button>
+              <button class="button alert" type="submit" value="Submit" name="submit">Daftar</button>
             </div>
           </form>
 		<?php

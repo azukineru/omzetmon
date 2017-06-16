@@ -7,7 +7,7 @@ include('function/session.php');
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OM-OM | Dashboard</title>
+  <title>OM-OM | Bantuan</title>
 
   <link rel="stylesheet" href="css/foundation.css">
   <link rel="stylesheet" href="css/app.css">
@@ -21,11 +21,11 @@ include('function/session.php');
 
   <div class="off-canvas-wrapper">
     <div class="large-12 bg-black">
-      <div class="row small-3 small-offset-9 show-for-large">
-        <h5>Hi, <a href="profile.php"><?php echo $login_fname; ?></a> | <a href="help.php">Help</a> | <a href="settings.php">Settings</a> | <a href="function/logout.php">Log out</a></h5>
+      <div class="row small-4 small-offset-8 show-for-large">
+        <h5>Hi, <a href="profile.php"><?php echo $login_fname; ?></a> | <a href="help.php">Bantuan</a> | <a href="settings.php">Pengaturan</a> | <a href="function/logout.php">Log out</a></h5>
       </div>
       <div class="row small-12 hide-for-large">
-        <h5>Hi, <a href="profile.php"><?php echo $login_fname; ?></a> | <a href="help.php">Help</a> | <a href="settings.php">Settings</a> | <a href="function/logout.php">Log out</a></h5>
+        <h5>Hi, <a href="profile.php"><?php echo $login_fname; ?></a> | <a href="help.php">Bantuan</a> | <a href="settings.php">Pengaturan</a> | <a href="function/logout.php">Log out</a></h5>
       </div>
     </div>
     <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
@@ -41,7 +41,7 @@ include('function/session.php');
           <div class="row small-12">
             <ul class="multilevel-accordion-menu vertical menu" data-accordion-menu>
               <li>
-                <a href="#">Monitoring Data</a>
+                <a href="#">Monitor Data</a>
                 <ul class="menu vertical sublevel-1">
                   <li><a class="subitem" href="monitor_pa.php">Data OMZET Perangkat Aktif</a></li>
                   <li><a class="subitem" href="monitor_pos.php">Data OMZET Primer / Sekunder</a></li>
@@ -49,7 +49,7 @@ include('function/session.php');
                 </ul>
               </li>
               <li>
-                <a href="#">Inserting Data</a>
+                <a href="#">Masukkan Data</a>
                 <ul class="menu vertical sublevel-1">
                   <li><a class="subitem" href="insert_pa.php">Data OMZET Perangkat Aktif</a></li>
                   <li><a class="subitem" href="insert_pos.php">Data OMZET Primer / Sekunder</a></li>
@@ -57,18 +57,18 @@ include('function/session.php');
                 </ul>
               </li>
               <li>
-                <a href="#">Activity History</a>
+                <a href="#">Histori Aktivitas</a>
                 <ul class="menu vertical sublevel-1">
-                  <li><a class="subitem" href="history.php">See Activity History</a></li>
+                  <li><a class="subitem" href="history.php">Lihat Histori Aktivitas</a></li>
                 </ul>
               </li>
               <?php
               if($login_acctype=='admin'){
                echo
                '<li>
-               <a href="#">Admin Management</a>
+               <a href="#">Pengaturan Admin</a>
                <ul class="menu vertical sublevel-1">
-                 <li><a class="subitem" href="admin_member.php">Member Approval</a></li>
+                 <li><a class="subitem" href="admin_member.php">Persetujuan Member</a></li>
                </ul>
              </li>';
            }
@@ -87,24 +87,20 @@ include('function/session.php');
     </div>
     <div class="callout primary">
       <div class="row column">
-        <h1>OM-OM | Site Help</h1>            
+        <h1>OM-OM | Bantuan</h1>            
       </div>
     </div>
     <div class="row medium-12">
       <div class="inner">
-        <h4>Questions You May Have</h4>
+        <h4>Pertanyaan yang mungkin anda punya</h4>
         <ol>
-          <li>What is this website used for ?</li>
+          <li>Apa kegunaan website ini ?</li>
           <p>
-            OM-OM is used to facilitate Office Team to manage any OMZET data which they got from Field Team. All OMZET data can be inserted, updated, and monitored thoroughly.
+            OM-OM digunakan sebagai aplikasi ticketing OMZET dimana pada tipe user tertentu dapat melakukan request untuk pemasukan/pengubahan ODP di UIM. Selanjutnya request tersebut akan diterima dan di-follow-up oleh user lain dimana user ini akan melakukan konfirmasi bahwa request tersebut sudah valid dan bisa dimasukkan ke UIM.
           </p>
-          <li>I have tried to register on this website but I couldn't login yet, what am I supposed to do ?</li>
+          <li>Apa saja fitur dari website ini dan bagaimana cara menggunakannya ?</li>
           <p>
-            Chill and relax. Once your registration request has been submitted, our admin will either approve or reject your request. If the data that you submitted is corresponding to your real identity, admin will approve it. After your request has been approved by admin, you can login and enter to the OMOM website.
-          </p>
-          <li>What kind of features does this website have, and how can I use it ?</li>
-          <p>
-            OMOM has three main features: Monitoring Data OMZET, Inserting Data OMZET, and Viewing Activity History. You may access those features by clicking menu on the left side of this website.
+            OMOM mempunyai 3 fitur utama, yaitu menambah request, memonitor serta mengupdate request, . You may access those features by clicking menu on the left side of this website.
             <ul class="help-img">
               <li>Monitoring Data OMZET</li>
               By Clicking Monitoring Data menu on the sidebar, you will see three submenus below it. These submenus is used to provide and display any OMZET data which has been inserted to the system.<br>

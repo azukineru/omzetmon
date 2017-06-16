@@ -37,10 +37,10 @@ if(isset($_SESSION['login_user'])){
               <label><h5>Password</h5>
                 <input type="password" name="password" placeholder="Password" value="<?php if(isset($_COOKIE["member_password"])) { echo $_COOKIE["member_password"]; } ?>" required />
               </label>
-              <input id="remember" name="remember" type="checkbox" <?php if(isset($_COOKIE["member_login"])) { ?> checked <?php } ?> ><label>Remember Me</label>
-              <label>Don't have account ? <a href="registration.php">Sign Up here</a></label>
+              <input id="remember" name="remember" type="checkbox" <?php if(isset($_COOKIE["member_login"])) { ?> checked <?php } ?> ><label>Ingat Saya</label>
+              <label>Tidak punya akun ? <a href="registration.php">Daftar di sini</a></label>
               <br>
-              <button class="button" type="submit" value="login" name="login">Login</button>	  
+              <button class="button alert" type="submit" value="login" name="login">Login</button>	  
               <span><?php echo $error?></span>
             </div>
           </form>

@@ -1,4 +1,4 @@
 <?php
-	$con=mysqli_connect("localhost", "root", "telkomindonesia123");
-	mysqli_select_db($con, "db_omom");
+	$con=mysqli_connect("localhost", "root", "");
+	mysqli_select_db($con, "db_mozet");
 ?>

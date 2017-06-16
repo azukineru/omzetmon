@@ -21,11 +21,11 @@ include('function/session.php');
 
   <div class="off-canvas-wrapper">
     <div class="large-12 bg-black">
-      <div class="row small-3 small-offset-9 show-for-large">
-        <h5>Hi, <a href="profile.php"><?php echo $login_fname; ?></a> | <a href="help.php">Help</a> | <a href="settings.php">Settings</a> | <a href="function/logout.php">Log out</a></h5>
+      <div class="row small-4 small-offset-8 show-for-large">
+        <h5>Hi, <a href="profile.php"><?php echo $login_fname; ?></a> | <a href="help.php">Bantuan</a> | <a href="settings.php">Pengaturan</a> | <a href="function/logout.php">Log out</a></h5>
       </div>
       <div class="row small-12 hide-for-large">
-        <h5>Hi, <a href="profile.php"><?php echo $login_fname; ?></a> | <a href="help.php">Help</a> | <a href="settings.php">Settings</a> | <a href="function/logout.php">Log out</a></h5>
+        <h5>Hi, <a href="profile.php"><?php echo $login_fname; ?></a> | <a href="help.php">Bantuan</a> | <a href="settings.php">Pengaturan</a> | <a href="function/logout.php">Log out</a></h5>
       </div>
     </div>
     <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
@@ -41,7 +41,7 @@ include('function/session.php');
           <div class="row small-12">
             <ul class="multilevel-accordion-menu vertical menu" data-accordion-menu>
               <li>
-                <a href="#">Monitoring Data</a>
+                <a href="#">Monitor Data</a>
                 <ul class="menu vertical sublevel-1">
                   <li><a class="subitem" href="monitor_pa.php">Data OMZET Perangkat Aktif</a></li>
                   <li><a class="subitem" href="monitor_pos.php">Data OMZET Primer / Sekunder</a></li>
@@ -49,7 +49,7 @@ include('function/session.php');
                 </ul>
               </li>
               <li>
-                <a href="#">Inserting Data</a>
+                <a href="#">Masukkan Data</a>
                 <ul class="menu vertical sublevel-1">
                   <li><a class="subitem" href="insert_pa.php">Data OMZET Perangkat Aktif</a></li>
                   <li><a class="subitem" href="insert_pos.php">Data OMZET Primer / Sekunder</a></li>
@@ -57,18 +57,18 @@ include('function/session.php');
                 </ul>
               </li>
               <li>
-                <a href="#">Activity History</a>
+                <a href="#">Histori Aktivitas</a>
                 <ul class="menu vertical sublevel-1">
-                  <li><a class="subitem" href="history.php">See Activity History</a></li>
+                  <li><a class="subitem" href="history.php">Lihat Histori Aktivitas</a></li>
                 </ul>
               </li>
               <?php
               if($login_acctype=='admin'){
                echo
                '<li>
-               <a href="#">Admin Management</a>
+               <a href="#">Pengaturan Admin</a>
                <ul class="menu vertical sublevel-1">
-                 <li><a class="subitem" href="admin_member.php">Member Approval</a></li>
+                 <li><a class="subitem" href="admin_member.php">Persetujuan Member</a></li>
                </ul>
              </li>';
            }
