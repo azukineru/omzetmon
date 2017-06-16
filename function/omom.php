@@ -1,6 +1,6 @@
 <?php	
 
-	function insertData($opt, $sto, $notelp, $noint, $qr, $datalama, $databaru, $keterangan, $issuer){
+	function insertData($opt, $sto, $stream, $notelp, $noint, $qr, $datalama, $databaru, $keterangan, $issuer){
 		include('database.php');
 		
 		switch ($opt){
@@ -22,13 +22,13 @@
 			default:
 		}
 		
-		$query="INSERT INTO ".$tb." (id, sto, no_telp, no_internet, qr, data_lama, data_baru, status, keterangan, issuer)
-				VALUES ('".$id."', '".$sto."', '".$notelp."', '".$noint."', '".$qr."', '".$datalama."', '".$databaru."', 'NEW', '".$keterangan."', '".$issuer."')";
+		$query="INSERT INTO ".$tb." (id, sto, stream, no_telp, no_internet, qr, data_lama, data_baru, status, keterangan, issuer)
+				VALUES ('".$id."', '".$sto."', '".$stream."', '".$notelp."', '".$noint."', '".$qr."', '".$datalama."', '".$databaru."', 'NEW', '".$keterangan."', '".$issuer."')";
 		
 		if ($con->query($query) == TRUE) { 
 				
-			$query="INSERT INTO tb_history (id, sto, no_telp, no_internet, qr, data_lama, data_baru, status, keterangan, issuer)
-					VALUES ('".$id."', '".$sto."', '".$notelp."', '".$noint."', '".$qr."', '".$datalama."', '".$databaru."', 'NEW', '".$keterangan."', '".$issuer."')";
+			$query="INSERT INTO tb_history (id, sto, stream, no_telp, no_internet, qr, data_lama, data_baru, status, keterangan, issuer)
+					VALUES ('".$id."', '".$sto."', '".$stream."', '".$notelp."', '".$noint."', '".$qr."', '".$datalama."', '".$databaru."', 'NEW', '".$keterangan."', '".$issuer."')";
 					
 			$con->query($query);
 			
@@ -81,11 +81,13 @@
 					}else{
 						echo '<tr>';
 					}
+					
 					$isquery=mysqli_query($con, "SELECT fname FROM tb_account WHERE email='".$row['issuer']."'");
 					$isrow=mysqli_fetch_assoc($isquery);
 					
 					$fuquery=mysqli_query($con, "SELECT fname FROM tb_account WHERE email='".$row['followup']."'");
-					$furow=mysqli_fetch_assoc($fuquery);																			  
+					$furow=mysqli_fetch_assoc($fuquery);
+					
 					echo 
 					'<td>'.$row['id'].'</td>
 					 <td>'.$row['sto'].'</td>
@@ -101,7 +103,6 @@
 					 <td><a href="profile.php?vemail='.$row['followup'].'">'.$furow['fname'].'</a></td>
 					 </tr>';
 				}else{
-					
 					$isquery=mysqli_query($con, "SELECT fname FROM tb_account WHERE email='".$row['issuer']."'");
 					$isrow=mysqli_fetch_assoc($isquery);
 					
@@ -212,8 +213,8 @@
           </form>';
 		  
 		if (isset($_POST["update"])) { 
-			$query="INSERT INTO tb_history (id, no_telp, no_internet, qr, data_lama, data_baru, status, keterangan, issuer, followup)
-					VALUES ('".$row['id']."', '".$row['no_telp']."', '".$row['no_internet']."', '".$row['qr']."', '".$row['data_lama']."', '".$row['data_baru']."', '".$_POST['status']."', '".$_POST['keterangan']."', '".$row['issuer']."', '".$followup."')";
+			$query="INSERT INTO tb_history (id, sto, stream, no_telp, no_internet, qr, data_lama, data_baru, status, keterangan, issuer, followup)
+					VALUES ('".$row['id']."', '".$row['sto']."', '".$row['stream']."', '".$row['no_telp']."', '".$row['no_internet']."', '".$row['qr']."', '".$row['data_lama']."', '".$row['data_baru']."', '".$_POST['status']."', '".$_POST['keterangan']."', '".$row['issuer']."', '".$followup."')";
 		
 			if ($con->query($query) == TRUE){
 
@@ -266,7 +267,7 @@
 		$row=mysqli_query($con,"SELECT * FROM tb_account WHERE email='".$email."'");
 		
 		if(mysqli_num_rows($row)==1){
-			$query="UPDATE tb_account SET password='".md5($password)."', fname='".$fname."', lname='".$lname."', phone='".$phone."'
+			$query="UPDATE tb_account SET password='".md5($pass)."', fname='".$fname."', lname='".$lname."', phone='".$phone."'
 					WHERE email='".$email."'";	
 			$con->query($query);
 			echo

@@ -96,7 +96,7 @@ include('function/session.php');
         <div class="column medium-3">
           <div class="card-flex-article card">
             <div class="card-image">
-              <img src="image/dashboard/1.jpg">
+              <img src="image/dashboard/1.png">
             </div>
             <div class="card-section">
               <h4 class="article-title">Amount of Requests</h4>              
@@ -113,7 +113,7 @@ include('function/session.php');
         <div class="column medium-3">
           <div class="card-flex-article card">
             <div class="card-image">
-              <img src="image/dashboard/2.jpg">
+              <img src="image/dashboard/2.png">
             </div>
             <div class="card-section">
               <h3 class="article-title">Closed Requests</h3>              
@@ -130,7 +130,7 @@ include('function/session.php');
         <div class="column medium-3">
           <div class="card-flex-article card">
             <div class="card-image">
-              <img src="image/dashboard/3.jpg">
+              <img src="image/dashboard/3.png">
             </div>
             <div class="card-section">
               <h3 class="article-title">Remained Request</h3>              
@@ -147,7 +147,7 @@ include('function/session.php');
         <div class="column medium-3">
           <div class="card-flex-article card">
             <div class="card-image">
-              <img src="image/dashboard/4.jpg">
+              <img src="image/dashboard/4.png">
             </div>
             <div class="card-section">
               <h3 class="article-title">Update Percentage</h3>              

@@ -1,7 +1,7 @@
 function configureDropDownLists(ddl1,ddl2) {
 	var daman = ['WITEL'];
 	var other = ['JHR', 'GNK', 'SMT', 'BOJ', 'MJE', 'MKG', 'SSL', 'MJP',
-				 'BMK', 'SMC', 'ABR', 'BDN', 'UNR', 'KDL', 'PUS', 'SKR', 'WITEL']
+				 'BMK', 'SMC', 'ABR', 'BDN', 'UNR', 'KDL', 'PUS', 'SKR', 'WITEL'];
 	
 	if(ddl1.value=='daman'){
 		ddl2.options.length = 0;

@@ -8,7 +8,7 @@ include('function/omom.php');
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OM-OM | Inserting Data OMZET Primer/Sekunder</title>
+  <title>OMOM | Inserting Data OMZET Primer/Sekunder</title>
 
   <link rel="stylesheet" href="css/foundation.css">
   <link rel="stylesheet" href="css/app.css">
@@ -36,7 +36,7 @@ include('function/omom.php');
           <div class="row medium-8">
             <img style="margin-top: 50px;" src="image/omom.png">
           </div>
-          <br>
+		  <br>
           <a href="dashboard.php"><h5 style="color:white"><center>OMZET Online Monitoring System</center></h5></a>
           <div class="row small-12">
             <ul class="multilevel-accordion-menu vertical menu" data-accordion-menu>
@@ -63,16 +63,16 @@ include('function/omom.php');
                 </ul>
               </li>
               <?php
-              if($login_acctype=='admin'){
-               echo
-               '<li>
-               <a href="#">Admin Management</a>
-               <ul class="menu vertical sublevel-1">
-                 <li><a class="subitem" href="admin_member.php">Member Approval</a></li>
-               </ul>
-             </li>';
-           }
-           ?>
+				if($login_acctype=='admin'){
+					echo
+					'<li>
+						<a href="#">Admin Management</a>
+						<ul class="menu vertical sublevel-1">
+							<li><a class="subitem" href="admin_member.php">Member Approval</a></li>
+						</ul>
+					</li>';
+				}
+			  ?>
             </ul>
           </div>
         </div>
@@ -146,7 +146,7 @@ include('function/omom.php');
                     <input type="text" name="keterangan" value="<?php echo isset($_POST['keterangan']) ? $_POST['keterangan'] : '' ?>">
                   </label>
                 </div>
-                <button type="submit" class="button large" name="save">Submit</button>
+                <button type="submit" class="button large" name="save">Save</button>
               </div>            
             </form>
           </div>
@@ -154,7 +154,7 @@ include('function/omom.php');
           <?php     
           if (isset($_POST["save"])) {
            if((isset($_POST['no_telp']) && ctype_digit($_POST['no_telp'])) || (isset($_POST['no_internet']) && ctype_digit($_POST['no_internet']))){
-            insertData(2,$_POST['sto'],$_POST['no_telp'],$_POST['no_internet'],$_POST['qr'],$_POST['data_lama'],$_POST['data_baru'],$_POST['keterangan'],$login_email);
+            insertData(2,$_POST['sto'],$login_acctype,$_POST['no_telp'],$_POST['no_internet'],$_POST['qr'],$_POST['data_lama'],$_POST['data_baru'],$_POST['keterangan'],$login_email);
           }else{
             echo
             '<script>

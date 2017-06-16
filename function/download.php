@@ -12,8 +12,9 @@
 	echo '<table border="1">';
 	echo '<tr>';
 	echo '<td>ID</td>'; 
-	echo '<td>STO</td>'; 
-	echo '<td>No Telp</td>'; 
+	echo '<td>STO</td>';
+	echo '<td>Stream</td>';
+	echo '<td>No Telepon</td>'; 
 	echo '<td>No Internet</td>'; 
 	echo '<td>QR Code</td>'; 
 	echo '<td>Data Lama</td>'; 
@@ -22,12 +23,20 @@
 	echo '<td>Keterangan</td>'; 
 	echo '<td>Tanggal</td>'; 
 	echo '<td>Issuer</td>'; 
-	echo '<td>FollowUp</td>'; 
+	echo '<td>Followup</td>'; 
 	echo '</tr>';
-	while ($row = mysqli_fetch_array($query)){ 
+	while ($row = mysqli_fetch_array($query)){
+
+		$isquery=mysqli_query($con, "SELECT fname FROM tb_account WHERE email='".$row['issuer']."'");
+		$isrow=mysqli_fetch_assoc($isquery);
+					
+		$fuquery=mysqli_query($con, "SELECT fname FROM tb_account WHERE email='".$row['followup']."'");
+		$furow=mysqli_fetch_assoc($fuquery);
+					
 		echo '<tr>';
 			echo '<td>'.$row['id'].'</td>'; 
 			echo '<td>'.$row['sto'].'</td>'; 
+			echo '<td>'.$row['stream'].'</td>';
 			echo '<td>'.$row['no_telp'].'</td>'; 
 			echo '<td>'.$row['no_internet'].'</td>'; 
 			echo '<td>'.$row['qr'].'</td>'; 
@@ -36,8 +45,8 @@
 			echo '<td>'.$row['status'].'</td>'; 
 			echo '<td>'.$row['keterangan'].'</td>'; 
 			echo '<td>'.$row['tanggal'].'</td>'; 
-			echo '<td>'.$row['issuer'].'</td>'; 
-			echo '<td>'.$row['followup'].'</td>';    
+			echo '<td>'.$isrow['fname'].'</td>'; 
+			echo '<td>'.$furow['fname'].'</td>';    
 		echo '</tr>';  
 	}
 	echo '</table>';

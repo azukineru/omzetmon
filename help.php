@@ -115,7 +115,7 @@ include('function/session.php');
               <li>Inserting Data OMZET</li>
               By Clicking Inserting Data menu on the sidebar, you will see three submenus below it. These submenus is used to insert any kind of OMZET data to the system.<br>
               <img class="thumbnail" src="image/help/3-3.jpg"><br>
-              After you have clicked one of those submenus, you will be able to see a form. Fill out those form based on the data that you received from field technician. After you are done, click 'Submit' button to submit those data to the system.<br>
+              After you have clicked one of those submenus, you will be able to see a form. Fill out those form based on the data that you received from field technician. After you are done, click 'Save' button to submit those data to the system.<br>
               <img class="thumbnail" src="image/help/3-4.jpg">
 
               <li>Viewing Activity History</li>
