@@ -100,32 +100,32 @@ include('function/session.php');
           </p>
           <li>Apa saja fitur dari website ini dan bagaimana cara menggunakannya ?</li>
           <p>
-            OMOM mempunyai 3 fitur utama, yaitu menambah request, memonitor serta mengupdate request, . You may access those features by clicking menu on the left side of this website.
+            OMOM mempunyai 3 fitur utama, yaitu menambah request, memonitor dan mengupdate request, serta melihat histori aktivitas. User dapat mengakses fitur tersebut melalui menu yang ada pada sebelah kiri.
             <ul class="help-img">
-              <li>Monitoring Data OMZET</li>
-              By Clicking Monitoring Data menu on the sidebar, you will see three submenus below it. These submenus is used to provide and display any OMZET data which has been inserted to the system.<br>
+              <li>Monitor Data OMZET</li>
+              Dengan memilih menu Monitor Data OMZET, anda akan melihat submenu ini.<br>
               <img class="thumbnail" src="image/help/3-1.jpg"><br>
-              After you have clicked one of those submenus, you will see a table that contain OMZET data. HD Daman and Premium User have access to view and update those data, meanwhile Basic User only have access to view those data.<br>
+              Setelah anda memilih salah satu submenu tersebut, anda akan melihat tabel daftar request. Hanya beberapa tipe akun saja yang memiliki akses untuk meng-update data tersebut.<br>
               <img class="thumbnail" src="image/help/3-2.jpg">
 
-              <li>Inserting Data OMZET</li>
-              By Clicking Inserting Data menu on the sidebar, you will see three submenus below it. These submenus is used to insert any kind of OMZET data to the system.<br>
+              <li>Masukkan Data OMZET</li>
+              Dengan memilih menu Masukkan Data OMZET, anda akan melihat submenu ini.<br>
               <img class="thumbnail" src="image/help/3-3.jpg"><br>
-              After you have clicked one of those submenus, you will be able to see a form. Fill out those form based on the data that you received from field technician. After you are done, click 'Save' button to submit those data to the system.<br>
+              Setelah memilih salah satu submenu tersebut, anda akan melihat sebuah form. Isilah form tersebut berdasarkan data yang anda terima dari teknisi lapangan. Setelah selesai, tekan tombol 'Simpan' untuk memproses data tersebut ke sistem.<br>
               <img class="thumbnail" src="image/help/3-4.jpg">
 
-              <li>Viewing Activity History</li>
-              By Clicking this menu, you can see a table which contain all kind of activities (e.g.: Inserting data and Updating data). In this page, you could also download data summary based on month.<br>
+              <li>Lihat Histori Aktivitas</li>
+              Dengan memilih menu ini, anda akan melihat tabel yang berisi bermacam-macam aktivitas ( seperti: pemasukan data atau update data ). Pada halaman ini anda juga bisa mengunduh rekap data berdasarkan bulan.<br>
               <img class="thumbnail" src="image/help/3-5.jpg">
             </ul>
           </p>
-          <li>I am an admin, where could I manage users who have registered to this website ?</li>
+          <li>Saya adalah admin, dimana saya dapat mengatur user yang telah mencoba mendaftar ke website ini ?</li>
           <p>
-            Simply click 'Admin Management' menu on the left sidebar. After that, you will see a table which contain user(s) who have requested a registration.
+            Pilih menu Pengaturan Admin pada menu sebelah kiri. Setelah itu, anda akan melihat tabel yang berisi daftar user yang meminta registrasi.
           </p>
-          <li>I want to change my password or my phone number, how am I supposed to do ?</li>
+          <li>Saya ingin mengganti password atau nomor telepon, apa yang harus saya lakukan ?</li>
           <p>
-            Click 'Settings' button on the top-right side, you will be able to see form. Edit the field that you want to change and click 'Save'.
+            Pilih tombol Pengaturan pada pojok kanan atas, anda kemudian akan melihat form. Ubah kolom yang anda ingin ganti, kemudian klik Simpan.
           </p>
         </ol>
       </div>
