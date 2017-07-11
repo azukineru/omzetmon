@@ -7,8 +7,5 @@
 	$result=mysqli_query($con,"SELECT * FROM tb_history WHERE status='CLOSED' OR status='REJECTED'");
 	$managed=mysqli_num_rows($result);
 	
-	$result=mysqli_query($con,"SELECT * FROM tb_history WHERE status='NEW' UNION SELECT * FROM tb_pos WHERE status='NEW' UNION SELECT * FROM tb_dpodp WHERE status='NEW' ");
-	$remain=mysqli_num_rows($result);
-
-	$percentage=($managed/$total)*100;
+	$result=mysqli_query($con,"SELECT * FROM tb_history WHERE status='NEW' UNION ");
 ?>

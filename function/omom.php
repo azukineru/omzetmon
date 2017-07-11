@@ -305,7 +305,7 @@
 		}else{
 			echo 
 			'<tr>
-			 <td colspan="10" style="text-align:center">Tidak ada permintaan saat ini.</td>
+			 <td colspan="10" style="text-align:center">There is no request at the moment.</td>
 			 </tr>';
 		}
 	}

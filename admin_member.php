@@ -8,7 +8,7 @@ include('function/omom.php');
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OM-OM | Persetujuan Member</title>
+  <title>OM-OM | Member Approval</title>
 
   <link rel="stylesheet" href="css/foundation.css">
   <link rel="stylesheet" href="css/app.css">
@@ -22,11 +22,11 @@ include('function/omom.php');
 
   <div class="off-canvas-wrapper">
     <div class="large-12 bg-black">
-      <div class="row small-4 small-offset-8 show-for-large">
-        <h5>Hi, <a href="profile.php"><?php echo $login_fname; ?></a> | <a href="help.php">Bantuan</a> | <a href="settings.php">Pengaturan</a> | <a href="function/logout.php">Log out</a></h5>
+      <div class="row small-3 small-offset-9 show-for-large">
+        <h5>Hi, <a href="profile.php"><?php echo $login_fname; ?></a> | <a href="help.php">Help</a> | <a href="settings.php">Settings</a> | <a href="function/logout.php">Log out</a></h5>
       </div>
       <div class="row small-12 hide-for-large">
-        <h5>Hi, <a href="profile.php"><?php echo $login_fname; ?></a> | <a href="help.php">Bantuan</a> | <a href="settings.php">Pengaturan</a> | <a href="function/logout.php">Log out</a></h5>
+        <h5>Hi, <a href="profile.php"><?php echo $login_fname; ?></a> | <a href="help.php">Help</a> | <a href="settings.php">Settings</a> | <a href="function/logout.php">Log out</a></h5>
       </div>
     </div>
     <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
@@ -42,7 +42,7 @@ include('function/omom.php');
           <div class="row small-12">
             <ul class="multilevel-accordion-menu vertical menu" data-accordion-menu>
               <li>
-                <a href="#">Monitor Data</a>
+                <a href="#">Monitoring Data</a>
                 <ul class="menu vertical sublevel-1">
                   <li><a class="subitem" href="monitor_pa.php">Data OMZET Perangkat Aktif</a></li>
                   <li><a class="subitem" href="monitor_pos.php">Data OMZET Primer / Sekunder</a></li>
@@ -50,7 +50,7 @@ include('function/omom.php');
                 </ul>
               </li>
               <li>
-                <a href="#">Masukkan Data</a>
+                <a href="#">Inserting Data</a>
                 <ul class="menu vertical sublevel-1">
                   <li><a class="subitem" href="insert_pa.php">Data OMZET Perangkat Aktif</a></li>
                   <li><a class="subitem" href="insert_pos.php">Data OMZET Primer / Sekunder</a></li>
@@ -58,15 +58,15 @@ include('function/omom.php');
                 </ul>
               </li>
               <li>
-                <a href="#">Histori Aktivitas</a>
+                <a href="#">Activity History</a>
                 <ul class="menu vertical sublevel-1">
-                  <li><a class="subitem" href="history.php">Lihat Histori Aktivitas</a></li>
+                  <li><a class="subitem" href="history.php">See Activity History</a></li>
                 </ul>
               </li>
               <li>
-                <a href="#">Pengaturan Admin</a>
+                <a href="#">Admin Management</a>
                 <ul class="menu vertical sublevel-1">
-                  <li><a class="subitem" href="admin_member.php">Persetujuan Member</a></li></li>
+                  <li><a class="subitem" href="admin_member.php">Member Approval</a></li></li>
                 </ul>
               </li>
             </ul>
@@ -83,21 +83,21 @@ include('function/omom.php');
         </div>
         <div class="callout primary">
           <div class="row column">
-            <h1>OM-OM | Persetujuan Member</h1>            
+            <h1>OM-OM | Member Approval</h1>            
           </div>
         </div>
         <div class="row medium-12">
-          <p>Di bawah ini adalah daftar user yang mencoba mendaftar ke OM-OM</p>
+          <p>This is the list of all users who have tried to register to OMOM</p>
 
           <table>
             <thead>
-              <th>Email</th>
-              <th>Nama Awal</th>
-              <th>Nama Akhir</th>
-              <th>Telepon</th>
-              <th>Tipe Akun</th>
+              <th>E-mail</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Phone</th>
+              <th>Account Type</th>
               <th>STO</th>
-              <th>Opsi</th>
+              <th>Action</th>
             </thead>
             <tbody>
              
